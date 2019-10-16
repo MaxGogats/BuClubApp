@@ -10,6 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBAction func EnterApp(_ sender: Any) {
+        
+        
+        let mainTabController = storyboard?.instantiateViewController(identifier: "MainTabController") as! MainTabController
+        present(mainTabController, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
