@@ -91,7 +91,7 @@
         <!--Roster-->
         <scene sceneID="BTm-1o-fyr">
             <objects>
-                <viewController id="Fia-Y4-Q1S" customClass="RosterViewController" customModule="BuClubApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="Fia-Y4-Q1S" customClass="RosterViewController" customModule="BuClubApp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Fv-5h-Vib">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -157,6 +157,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Fia-Y4-Q1S" id="VpE-7F-xZj"/>
+                                    <outlet property="delegate" destination="Fia-Y4-Q1S" id="SzX-BQ-s9G"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -170,7 +174,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Roster" image="user_male" id="hXA-6j-R0W"/>
                     <connections>
-                        <outlet property="tableView" destination="Kn6-vc-OUs" id="oJI-vl-yJB"/>
+                        <outlet property="rosterView" destination="7Fv-5h-Vib" id="Tv6-Ip-UDv"/>
+                        <outlet property="tableView" destination="Kn6-vc-OUs" id="cx4-tj-gIB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yhW-rW-0TE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     @IBAction func EnterApp(_ sender: Any) {
         let mainTabController = storyboard?.instantiateViewController(identifier: "MainTabController") as! MainTabController
+        
+        mainTabController.selectedViewController = mainTabController.viewControllers?[3]
         present(mainTabController, animated: true, completion: nil)
     }
     

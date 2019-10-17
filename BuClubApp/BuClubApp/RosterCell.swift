@@ -17,23 +17,9 @@ class RosterCell: UITableViewCell {
     
     
     func setPlayer(player: Player){
-        PlayerPicture.image = player.playerImage
+        PlayerPicture = player.playerImage
         PlayerName.text = player.playerName
         PlayerNum.text = player.playerNumber
         PlayerBT.text = player.playerBT
     }
-    
-    
-    
-   /* override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }*/
-
 }
