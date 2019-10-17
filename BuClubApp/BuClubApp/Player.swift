@@ -10,15 +10,13 @@ import Foundation
 import UIKit
 
 class Player {
-    var playerImage : UIImageView
+    var playerImage : UIImage
     var playerName : String
-    var playerBT : String
     var playerNumber : String 
     
-    init(image: UIImageView, playerName: String, bt: String, playerNumber: String){
+    init(image: UIImage, playerName: String, playerNumber: String){
         self.playerImage = image
         self.playerName = playerName
-        self.playerBT = bt
         self.playerNumber = playerNumber
     }
 }

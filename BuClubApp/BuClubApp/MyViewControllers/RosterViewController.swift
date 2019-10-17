@@ -12,21 +12,6 @@ import Foundation
 class RosterViewController : UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet weak var tableView: UITableView!
-   
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return players.count
-    }
-        
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        /*let player = players[indexPath.row]
-            
-        cell.setPlayer(player: player)*/
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerCell") as! RosterCell
-        
-        return cell
-            
-    }
     
     var players : [Player] = []
     
@@ -41,14 +26,31 @@ class RosterViewController : UIViewController, UITableViewDataSource, UITableVie
         var tempPlayers: [Player] = []
         
         //parse data from mlb.com in the future, for now I will simply add a couple examples
-        let tanaka1 = UIImageView(image: UIImage(named: "tanaka"))
-        let p1 = Player(image: tanaka1, playerName: "Masahiro Tanaka", bt: "R/R", playerNumber: "19")
+        let tanaka1 = UIImage(named: "tanaka")
+        let p1 = Player(image: tanaka1!, playerName: "Masahiro Tanaka", playerNumber: "19")
         
         tempPlayers.append(p1)
-        
         return tempPlayers
         }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print (players.count)
+        return players.count
     }
+        
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let player = players[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerCell") as! RosterCell
+        
+        cell.setPlayer(player: player)
+        
+       
+        
+        return cell
+            
+    }
+}
     
     
 
