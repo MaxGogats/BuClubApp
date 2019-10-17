@@ -15,9 +15,9 @@ class Player {
     var playerBT : String
     var playerNumber : String 
     
-    init(image: UIImage, title: String, bt: String, playerNumber: String){
+    init(image: UIImage, playerName: String, bt: String, playerNumber: String){
         self.playerImage = image
-        self.playerName = title
+        self.playerName = playerName
         self.playerBT = bt
         self.playerNumber = playerNumber
     }

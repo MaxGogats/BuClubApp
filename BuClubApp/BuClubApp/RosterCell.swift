@@ -12,8 +12,20 @@ class RosterCell: UITableViewCell {
     
     @IBOutlet weak var PlayerPicture: UIImageView!
     @IBOutlet weak var PlayerName: UILabel!
+    @IBOutlet weak var PlayerNum: UILabel!
+    @IBOutlet weak var PlayerBT: UILabel!
     
-    override func awakeFromNib() {
+    
+    func setPlayer(player: Player){
+        PlayerPicture.image = player.playerImage
+        PlayerName.text = player.playerName
+        PlayerNum.text = player.playerNumber
+        PlayerBT.text = player.playerBT
+    }
+    
+    
+    
+   /* override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
@@ -22,6 +34,6 @@ class RosterCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-    }
+    }*/
 
 }

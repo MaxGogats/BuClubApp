@@ -91,7 +91,7 @@
         <!--Roster-->
         <scene sceneID="BTm-1o-fyr">
             <objects>
-                <viewController id="Fia-Y4-Q1S" sceneMemberID="viewController">
+                <viewController id="Fia-Y4-Q1S" customClass="RosterViewController" customModule="BuClubApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Fv-5h-Vib">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -136,9 +136,12 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bat/Throw" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9g5-tf-lhi">
-                                                    <rect key="frame" x="314" y="25" width="80" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Bat/Throw" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9g5-tf-lhi" customClass="Roster">
+                                                    <rect key="frame" x="301" y="26" width="80" height="23"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="8kv-fS-w5j"/>
+                                                        <constraint firstAttribute="height" constant="23" id="lKY-mQ-0sT"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -146,8 +149,10 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="PlayerBT" destination="9g5-tf-lhi" id="mDr-lu-2YU"/>
                                             <outlet property="PlayerCell" destination="hIq-fc-ZCp" id="Cfh-ob-OAr"/>
                                             <outlet property="PlayerName" destination="0kB-Nd-1UM" id="vsh-r1-069"/>
+                                            <outlet property="PlayerNum" destination="ctX-w8-FL3" id="WAo-oV-Odw"/>
                                             <outlet property="PlayerPicture" destination="LPg-yi-i4L" id="apx-3F-dSn"/>
                                         </connections>
                                     </tableViewCell>
@@ -164,6 +169,9 @@
                         <viewLayoutGuide key="safeArea" id="puD-u4-MPt"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Roster" image="user_male" id="hXA-6j-R0W"/>
+                    <connections>
+                        <outlet property="tableView" destination="Kn6-vc-OUs" id="oJI-vl-yJB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yhW-rW-0TE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
