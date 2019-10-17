@@ -14,6 +14,8 @@
 		35A41389235775FD00B5E5C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35A41388235775FD00B5E5C9 /* Assets.xcassets */; };
 		35A4138C235775FD00B5E5C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35A4138A235775FD00B5E5C9 /* LaunchScreen.storyboard */; };
 		35A413942357787B00B5E5C9 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A413932357787B00B5E5C9 /* MainTabController.swift */; };
+		35A413962358BE8300B5E5C9 /* RosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A413952358BE8300B5E5C9 /* RosterCell.swift */; };
+		35A413982358C0FF00B5E5C9 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A413972358C0FF00B5E5C9 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		35A4138B235775FD00B5E5C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35A4138D235775FD00B5E5C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35A413932357787B00B5E5C9 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		35A413952358BE8300B5E5C9 /* RosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterCell.swift; sourceTree = "<group>"; };
+		35A413972358C0FF00B5E5C9 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				35A4137F235775F900B5E5C9 /* AppDelegate.swift */,
 				35A41381235775F900B5E5C9 /* SceneDelegate.swift */,
 				35A41383235775F900B5E5C9 /* ViewController.swift */,
+				35A413952358BE8300B5E5C9 /* RosterCell.swift */,
+				35A413972358C0FF00B5E5C9 /* Player.swift */,
 				35A41385235775F900B5E5C9 /* Main.storyboard */,
 				35A41388235775FD00B5E5C9 /* Assets.xcassets */,
 				35A4138A235775FD00B5E5C9 /* LaunchScreen.storyboard */,
@@ -144,6 +150,8 @@
 				35A41384235775F900B5E5C9 /* ViewController.swift in Sources */,
 				35A41380235775F900B5E5C9 /* AppDelegate.swift in Sources */,
 				35A413942357787B00B5E5C9 /* MainTabController.swift in Sources */,
+				35A413962358BE8300B5E5C9 /* RosterCell.swift in Sources */,
+				35A413982358C0FF00B5E5C9 /* Player.swift in Sources */,
 				35A41382235775F900B5E5C9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

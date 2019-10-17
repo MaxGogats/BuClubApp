@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bulogo5" translatesAutoresizingMaskIntoConstraints="NO" id="6Ab-hD-0WM">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yankees1" translatesAutoresizingMaskIntoConstraints="NO" id="6Ab-hD-0WM">
                                 <rect key="frame" x="67" y="358" width="280" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -32,7 +32,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.01643301360309124" green="0.33883196115493774" blue="0.25881585478782654" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.064856134355068207" green="0.10308689624071121" blue="0.26276117563247681" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -95,14 +95,79 @@
                     <view key="view" contentMode="scaleToFill" id="7Fv-5h-Vib">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kn6-vc-OUs">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlayerCell" rowHeight="75" id="FYP-rO-gyY" customClass="RosterCell" customModule="BuClubApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FYP-rO-gyY" id="hIq-fc-ZCp">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LPg-yi-i4L">
+                                                    <rect key="frame" x="62" y="7" width="70" height="61"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="61" id="9Eg-tR-d6Q"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="E3o-qU-z8F"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="61" id="agG-jY-7Eb"/>
+                                                        <constraint firstAttribute="height" constant="53" id="t6d-UP-UST"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Player Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kB-Nd-1UM">
+                                                    <rect key="frame" x="159" y="26" width="97" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="97" id="FG8-nX-pRN"/>
+                                                        <constraint firstAttribute="height" constant="20" id="kZp-7j-CDh"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Num" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctX-w8-FL3">
+                                                    <rect key="frame" x="17" y="27" width="37" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="37" id="5Zk-hC-m6t"/>
+                                                        <constraint firstAttribute="height" constant="21" id="Rtk-Fr-gj2"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bat/Throw" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9g5-tf-lhi">
+                                                    <rect key="frame" x="314" y="25" width="80" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="PlayerCell" destination="hIq-fc-ZCp" id="Cfh-ob-OAr"/>
+                                            <outlet property="PlayerName" destination="0kB-Nd-1UM" id="vsh-r1-069"/>
+                                            <outlet property="PlayerPicture" destination="LPg-yi-i4L" id="apx-3F-dSn"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="puD-u4-MPt" firstAttribute="bottom" secondItem="Kn6-vc-OUs" secondAttribute="bottom" id="JDw-8I-DmJ"/>
+                            <constraint firstItem="puD-u4-MPt" firstAttribute="trailing" secondItem="Kn6-vc-OUs" secondAttribute="trailing" id="MUL-9S-pJF"/>
+                            <constraint firstItem="Kn6-vc-OUs" firstAttribute="top" secondItem="puD-u4-MPt" secondAttribute="top" id="OtV-ZJ-Wkw"/>
+                            <constraint firstItem="Kn6-vc-OUs" firstAttribute="leading" secondItem="puD-u4-MPt" secondAttribute="leading" id="s8g-HU-Cei"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="puD-u4-MPt"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Roster" image="user_male" id="hXA-6j-R0W"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yhW-rW-0TE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1142" y="850"/>
+            <point key="canvasLocation" x="1140.5797101449277" y="849.77678571428567"/>
         </scene>
         <!--Main Tab Controller-->
         <scene sceneID="Dvg-Hx-97u">
@@ -126,10 +191,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bulogo5" width="368" height="384"/>
         <image name="combo_chart" width="30" height="30"/>
         <image name="contact_card" width="30" height="30"/>
         <image name="planner" width="30" height="30"/>
         <image name="user_male" width="30" height="30"/>
+        <image name="yankees1" width="500" height="500"/>
     </resources>
 </document>
