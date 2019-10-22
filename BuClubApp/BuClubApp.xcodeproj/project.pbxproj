@@ -17,9 +17,11 @@
 		35A413962358BE8300B5E5C9 /* RosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A413952358BE8300B5E5C9 /* RosterCell.swift */; };
 		35A413982358C0FF00B5E5C9 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A413972358C0FF00B5E5C9 /* Player.swift */; };
 		35A4139A2358C69C00B5E5C9 /* RosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A413992358C69C00B5E5C9 /* RosterViewController.swift */; };
+		CE5378EB8B1497C1B69EE2A3 /* Pods_BuClubApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F4FD8340544D5704F14FEA /* Pods_BuClubApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2EEBE087C117863D7C28BF0B /* Pods-BuClubApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuClubApp.debug.xcconfig"; path = "Target Support Files/Pods-BuClubApp/Pods-BuClubApp.debug.xcconfig"; sourceTree = "<group>"; };
 		35A4137C235775F900B5E5C9 /* BuClubApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuClubApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A4137F235775F900B5E5C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35A41381235775F900B5E5C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +34,8 @@
 		35A413952358BE8300B5E5C9 /* RosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterCell.swift; sourceTree = "<group>"; };
 		35A413972358C0FF00B5E5C9 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		35A413992358C69C00B5E5C9 /* RosterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterViewController.swift; sourceTree = "<group>"; };
+		A89AEA03F0BE9227F6A973D8 /* Pods-BuClubApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuClubApp.release.xcconfig"; path = "Target Support Files/Pods-BuClubApp/Pods-BuClubApp.release.xcconfig"; sourceTree = "<group>"; };
+		D5F4FD8340544D5704F14FEA /* Pods_BuClubApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuClubApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE5378EB8B1497C1B69EE2A3 /* Pods_BuClubApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +55,8 @@
 			children = (
 				35A4137E235775F900B5E5C9 /* BuClubApp */,
 				35A4137D235775F900B5E5C9 /* Products */,
+				8047C77249CDBB6C4D69021F /* Pods */,
+				C91A7D9D3383D35E2BB0D174 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +110,24 @@
 			path = StoryBoards;
 			sourceTree = "<group>";
 		};
+		8047C77249CDBB6C4D69021F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2EEBE087C117863D7C28BF0B /* Pods-BuClubApp.debug.xcconfig */,
+				A89AEA03F0BE9227F6A973D8 /* Pods-BuClubApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C91A7D9D3383D35E2BB0D174 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D5F4FD8340544D5704F14FEA /* Pods_BuClubApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,9 +135,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35A41390235775FD00B5E5C9 /* Build configuration list for PBXNativeTarget "BuClubApp" */;
 			buildPhases = (
+				834A84D60F246982192D21AA /* [CP] Check Pods Manifest.lock */,
 				35A41378235775F900B5E5C9 /* Sources */,
 				35A41379235775F900B5E5C9 /* Frameworks */,
 				35A4137A235775F900B5E5C9 /* Resources */,
+				B78A747842654B624EBF6E12 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -168,6 +195,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		834A84D60F246982192D21AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BuClubApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B78A747842654B624EBF6E12 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BuClubApp/Pods-BuClubApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BuClubApp/Pods-BuClubApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BuClubApp/Pods-BuClubApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		35A41378235775F900B5E5C9 /* Sources */ = {
@@ -322,6 +391,7 @@
 		};
 		35A41391235775FD00B5E5C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EEBE087C117863D7C28BF0B /* Pods-BuClubApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -339,6 +409,7 @@
 		};
 		35A41392235775FD00B5E5C9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A89AEA03F0BE9227F6A973D8 /* Pods-BuClubApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
