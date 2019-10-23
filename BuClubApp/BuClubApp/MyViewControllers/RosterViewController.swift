@@ -16,6 +16,8 @@ class RosterViewController : UIViewController, UITableViewDataSource, UITableVie
     
     var players : [Player] = []
     
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         players = createPlayerArray()
@@ -24,8 +26,10 @@ class RosterViewController : UIViewController, UITableViewDataSource, UITableVie
     
     func createPlayerArray() -> [Player] {
         
+        let topPlayer = Player(pos: "Position", playerName: "Name", playerNumber: "#")
+        players.append(topPlayer)
         var tempPlayers: [Player] = []
-        var numPlayers = 0
+        var numPlayers = 29
         /*//parse data from mlb.com in the future, for now I will simply add a couple examples
         let p1 = Player(pos: "CF/P", playerName: "Max Gogats", playerNumber: "39")
         
@@ -33,7 +37,7 @@ class RosterViewController : UIViewController, UITableViewDataSource, UITableVie
         return tempPlayers*/
         
         do{
-            let html = "<html>" +
+            /*"<html>" +
             "<body>" +
             "<h2>2019-2020 BU Club Baseball Roster</h2>" +
             "<table style='width:100%'>" +
@@ -45,7 +49,46 @@ class RosterViewController : UIViewController, UITableViewDataSource, UITableVie
             " <tr> <td>39</td> <td>Max Gogats</td><td>CF/P</td> </tr>" +
             "<tr><td>8</td><td>Paul Bev</td><td>C/OF</td></tr>" +
             "<tr><td>22</td><td>TJ Rullo</td><td>P/3B</td> </tr>" +
-            "</table> </body> </html>"
+            "</table> </body> </html>"*/
+            
+            let html =
+                "<html>" +
+                "<body>" +
+                "<table style='width:100%'>" +
+                "<tr> +<th align='left'>Number</th> " +
+                "<th align='left'>Name</th>" +
+                "<th align='left'>Pos</th> </tr>" +
+                "<tr><td>8</td><td>Bevilacqua, Paul</td><td>OF/C</td><tr>" +
+                "<td>23</td><td>Casabianca, Nicholas</td><td>FLEX/C</td>" +
+                "<tr><td>10</td><td>Cook, Samuel</td><td>3B/C</td></tr>" +
+                "<tr><td>27</td><td>Dadabo, Aidan</td><td>OF/P</td>" +
+                "<tr><td>10</td><td>Dejewski, Nicholas</td><td>P</td>" +
+                "<tr><td>44</td><td>Dennis, Nicholas</td><td>OF/3B</td></tr>" +
+                "<tr><td>21</td><td>Dragunat, Kyle</td><td>P/3B</td></tr>" +
+                "</tr><tr>98<td>13</td><td>Florio, Will</td><td>SS/UT</td>" +
+                "<tr><td>6</td><td> Giarraputo, Brian</td><td>P/UT</td>" +
+                "</tr><tr><td>39</td><td> Gogats, Max</td><td>CF/P</td>" +
+                "<tr><td>16</td><td> Hansen Jr, Steven</td><td>RHP</td>" +
+                "<tr><td>19</td><td> Hennie, Daniel</td><td>SS/OF</td></tr>" +
+                "<tr><td>97</td><td> Lindley, Matthew</td><td>RHP</td></tr>" +
+                "<tr><td>99</td><td> McGee, Paul</td><td>OF/C</td></tr>" +
+                "<tr><td>3</td><td> McGrath, Ryan</td><td>RHP</td></tr>" +
+                "<tr><td>11</td><td> Miki, Takenari</td><td>2B/OF</td></tr>" +
+                "<tr><td>5</td><td> Mischo, Luke</td><td>2B/DH</td></tr>" +
+                "<tr><td>33</td><td> Murray, Joseph</td><td>OF/P</td></tr>" +
+                "<tr><td>19</td><td> Nicklas, Jake</td><td>RHP</td></tr>" +
+                "<tr><td>14</td><td> Pederson, Andrew</td><td>P/FLEX</td></tr>" +
+                "<tr><td>52</td><td> Petrucci, Joseph</td><td>C</td>" +
+                "</tr><tr><td>18</td><td> Rajovic, Alexander</td><td>OF/P</td>" +
+                "</tr><tr><td>22</td><td> Rullo, Thomas</td><td>P/3B</td>" +
+                "</tr><tr><td>40</td><td> Schwartz, Drew</td><td>LHP</td></tr>" +
+                "<tr><td>17</td><td> Smith, Stephen</td><td>P</td>" +
+                "</tr><tr><td>28</td><td> Stanton, Nick</td><td>1B</td>" +
+                "</tr><tr><td>4</td><td> Wagner, Michael</td><td>SS/2B</td>" +
+                "</tr><tr><td>17</td><td>Walsh, Matthew</td><td>OF</td>" +
+                "</tr><tr><td>31</td><td>Weinberg, Jesse</td><td>C</td>" +
+                "</tr><tr><td>9</td><td> Xhunga, Brandon</td><td>2B,SS,3B</td></tr></tbody>        </table> </html>"
+            
         
             let doc: Document = try SwiftSoup.parse(html)
             let td : [Element] = try doc.getElementsByTag("td").array()
@@ -78,7 +121,6 @@ class RosterViewController : UIViewController, UITableViewDataSource, UITableVie
                     } else {
                          num.append(stripped)
                          used = true
-                        numPlayers = numPlayers+1
                     }
                 }
                 
