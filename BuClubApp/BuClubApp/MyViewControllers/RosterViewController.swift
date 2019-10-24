@@ -21,36 +21,20 @@ class RosterViewController : UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         players = createPlayerArray()
-        parseExample()
     }
     
     func createPlayerArray() -> [Player] {
         
         let topPlayer = Player(pos: "Position", playerName: "Name", playerNumber: "#")
         players.append(topPlayer)
-        var tempPlayers: [Player] = []
-        var numPlayers = 29
-        /*//parse data from mlb.com in the future, for now I will simply add a couple examples
-        let p1 = Player(pos: "CF/P", playerName: "Max Gogats", playerNumber: "39")
         
-        tempPlayers.append(p1)
-        return tempPlayers*/
+        let numPlayers = 29
         
         do{
-            /*"<html>" +
-            "<body>" +
-            "<h2>2019-2020 BU Club Baseball Roster</h2>" +
-            "<table style='width:100%'>" +
-             
-            "<tr> +<th align='left'>Number</th> " +
-            "<th align='left'>Name</th>" +
-            "<th align='left'>Pos</th> </tr>" +
-                
-            " <tr> <td>39</td> <td>Max Gogats</td><td>CF/P</td> </tr>" +
-            "<tr><td>8</td><td>Paul Bev</td><td>C/OF</td></tr>" +
-            "<tr><td>22</td><td>TJ Rullo</td><td>P/3B</td> </tr>" +
-            "</table> </body> </html>"*/
             
+        /* HTML taken from
+    https://www.clubbaseball.org/league/team/?team=36c1ba31-b586-4be7-a37b-343c6d9363ee&season=46d3ea9a-a080-4273-befb-58b30c2adb01#team-player/
+        */
             let html =
                 "<html>" +
                 "<body>" +
@@ -145,11 +129,6 @@ class RosterViewController : UIViewController, UITableViewDataSource, UITableVie
         return players
     }
     
-    
-    func parseExample() -> Void{
-    
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return players.count
     }
@@ -164,6 +143,16 @@ class RosterViewController : UIViewController, UITableViewDataSource, UITableVie
         return cell
             
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+
+        let row = indexPath.row
+        
+        
+
+    }
+    
 }
     
     
