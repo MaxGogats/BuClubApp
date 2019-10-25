@@ -10,13 +10,11 @@ import UIKit
 import Foundation
 import SwiftSoup
 
+var players : [Player] = []
+
 class RosterViewController : UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet weak var tableView: UITableView!
-    
-    var players : [Player] = []
-    
-   
     
     override func viewDidLoad() {
         super.viewDidLoad()

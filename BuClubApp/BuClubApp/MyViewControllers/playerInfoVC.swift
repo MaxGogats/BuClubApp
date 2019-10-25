@@ -13,15 +13,12 @@ import UIKit
 class playerInfoVC: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nameLabel.text = "PlayerName"
+        nameLabel.text = "Max Gogats"
         nameLabel.textAlignment = .center
         nameLabel.font = UIFont(name: "Copperplate-Bold", size: 40)
-        
     }
-    
-    
-    
 }
