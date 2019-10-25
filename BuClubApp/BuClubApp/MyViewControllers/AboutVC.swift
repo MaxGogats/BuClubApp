@@ -10,19 +10,12 @@ import Foundation
 import UIKit
 import WebKit
 
-class AboutVC: UIViewController,  WKUIDelegate {
+class AboutVC: UIViewController, WKUIDelegate {
     
     @IBOutlet weak var banner: UILabel!
-    @IBOutlet weak var facebook: WKWebView!
     
-    override func loadView() {
-        
-        let webConfiguration = WKWebViewConfiguration()
-        facebook = WKWebView(frame: CGRect(x: 150, y: 150, width: 150, height: 150), configuration: webConfiguration)
-        facebook.uiDelegate = self
-        view = facebook
-    }
-    
+    @IBOutlet weak var fb: UILabel!
+    @IBOutlet weak var kansas: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,9 +23,9 @@ class AboutVC: UIViewController,  WKUIDelegate {
         banner.text = "Binghamton Club Baseball"
         banner.numberOfLines = 2
         banner.textAlignment = .center
+        kansas.textAlignment = .center
+        fb.textAlignment = .center
         
-        let myURL = URL(string:"https://www.facebook.com/binghamtonclubbaseball")
-        let myRequest = URLRequest(url: myURL!)
-        facebook.load(myRequest)
     }
+    
 }

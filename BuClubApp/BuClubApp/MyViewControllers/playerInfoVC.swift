@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SwiftSoup
 
 
 class playerInfoVC: UIViewController {
@@ -21,4 +22,10 @@ class playerInfoVC: UIViewController {
         nameLabel.textAlignment = .center
         nameLabel.font = UIFont(name: "Copperplate-Bold", size: 40)
     }
+    
+    
+    func loadPlayerData(){
+        
+    }
+    
 }
