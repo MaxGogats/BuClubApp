@@ -19,6 +19,7 @@
 		35A413962358BE8300B5E5C9 /* RosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A413952358BE8300B5E5C9 /* RosterCell.swift */; };
 		35A413982358C0FF00B5E5C9 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A413972358C0FF00B5E5C9 /* Player.swift */; };
 		35A4139A2358C69C00B5E5C9 /* RosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A413992358C69C00B5E5C9 /* RosterViewController.swift */; };
+		35E1CDA72365078000A129F1 /* stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E1CDA62365078000A129F1 /* stats.swift */; };
 		CE5378EB8B1497C1B69EE2A3 /* Pods_BuClubApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F4FD8340544D5704F14FEA /* Pods_BuClubApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		35A413952358BE8300B5E5C9 /* RosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterCell.swift; sourceTree = "<group>"; };
 		35A413972358C0FF00B5E5C9 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		35A413992358C69C00B5E5C9 /* RosterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterViewController.swift; sourceTree = "<group>"; };
+		35E1CDA62365078000A129F1 /* stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stats.swift; sourceTree = "<group>"; };
 		A89AEA03F0BE9227F6A973D8 /* Pods-BuClubApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuClubApp.release.xcconfig"; path = "Target Support Files/Pods-BuClubApp/Pods-BuClubApp.release.xcconfig"; sourceTree = "<group>"; };
 		D5F4FD8340544D5704F14FEA /* Pods_BuClubApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuClubApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -77,6 +79,7 @@
 			children = (
 				35A413952358BE8300B5E5C9 /* RosterCell.swift */,
 				35A413972358C0FF00B5E5C9 /* Player.swift */,
+				35E1CDA62365078000A129F1 /* stats.swift */,
 				35A4139C2358C73200B5E5C9 /* MyViewControllers */,
 				35A4139E2358C77000B5E5C9 /* StoryBoards */,
 				35A41388235775FD00B5E5C9 /* Assets.xcassets */,
@@ -249,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35A41384235775F900B5E5C9 /* ViewController.swift in Sources */,
+				35E1CDA72365078000A129F1 /* stats.swift in Sources */,
 				35A41380235775F900B5E5C9 /* AppDelegate.swift in Sources */,
 				35A413942357787B00B5E5C9 /* MainTabController.swift in Sources */,
 				35A413962358BE8300B5E5C9 /* RosterCell.swift in Sources */,

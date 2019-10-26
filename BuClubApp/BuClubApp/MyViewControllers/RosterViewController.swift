@@ -11,6 +11,7 @@ import Foundation
 import SwiftSoup
 
 var players : [Player] = []
+var rowClicked : Int = 0
 
 class RosterViewController : UIViewController, UITableViewDataSource, UITableViewDelegate{
     
@@ -143,12 +144,7 @@ class RosterViewController : UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-
-        let row = indexPath.row
-        
-        
-
+        rowClicked = indexPath.row
     }
     
 }
