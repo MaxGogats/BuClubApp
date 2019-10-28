@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35200F862367373700DCF3BF /* scheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35200F852367373700DCF3BF /* scheduleCell.swift */; };
+		35200F882367378C00DCF3BF /* scheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35200F872367378C00DCF3BF /* scheduleVC.swift */; };
 		3528173423635BE00082B87A /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3528173323635BE00082B87A /* AboutVC.swift */; };
 		35584D48235F825E00A86890 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35584D47235F825E00A86890 /* Main.storyboard */; };
 		359FAF57236209A000CD2A8B /* playerInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359FAF56236209A000CD2A8B /* playerInfoVC.swift */; };
@@ -25,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		2EEBE087C117863D7C28BF0B /* Pods-BuClubApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuClubApp.debug.xcconfig"; path = "Target Support Files/Pods-BuClubApp/Pods-BuClubApp.debug.xcconfig"; sourceTree = "<group>"; };
+		35200F852367373700DCF3BF /* scheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scheduleCell.swift; sourceTree = "<group>"; };
+		35200F872367378C00DCF3BF /* scheduleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scheduleVC.swift; sourceTree = "<group>"; };
 		3528173323635BE00082B87A /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		35584D47235F825E00A86890 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../../.Trash/Main.storyboard; sourceTree = "<group>"; };
 		359FAF56236209A000CD2A8B /* playerInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playerInfoVC.swift; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 				35A413952358BE8300B5E5C9 /* RosterCell.swift */,
 				35A413972358C0FF00B5E5C9 /* Player.swift */,
 				35E1CDA62365078000A129F1 /* stats.swift */,
+				35200F852367373700DCF3BF /* scheduleCell.swift */,
 				35A4139C2358C73200B5E5C9 /* MyViewControllers */,
 				35A4139E2358C77000B5E5C9 /* StoryBoards */,
 				35A41388235775FD00B5E5C9 /* Assets.xcassets */,
@@ -97,6 +102,7 @@
 				35A413932357787B00B5E5C9 /* MainTabController.swift */,
 				359FAF56236209A000CD2A8B /* playerInfoVC.swift */,
 				3528173323635BE00082B87A /* AboutVC.swift */,
+				35200F872367378C00DCF3BF /* scheduleVC.swift */,
 			);
 			path = MyViewControllers;
 			sourceTree = "<group>";
@@ -260,7 +266,9 @@
 				3528173423635BE00082B87A /* AboutVC.swift in Sources */,
 				35A41382235775F900B5E5C9 /* SceneDelegate.swift in Sources */,
 				35A4139A2358C69C00B5E5C9 /* RosterViewController.swift in Sources */,
+				35200F882367378C00DCF3BF /* scheduleVC.swift in Sources */,
 				359FAF57236209A000CD2A8B /* playerInfoVC.swift in Sources */,
+				35200F862367373700DCF3BF /* scheduleCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
