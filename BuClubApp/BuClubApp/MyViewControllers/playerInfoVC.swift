@@ -40,11 +40,11 @@ class playerInfoVC: UIViewController {
     func loadPlayerData(){
         var playerStats: [stats] = []
         
-        var bevStats = stats(name: "Paul Bev", abs: "10", numHits1: "5", avg1: ".500", obp1: ".500", rbi1: "10")
-    
         nameLabel.setTitle(name[rowClicked-1], for: .normal)
         nameLabel.titleLabel?.font = UIFont(name: "Copperplate-Bold", size: 40)
         nameLabel.titleLabel?.numberOfLines = 2
+        
+        
         
         
         //playerName.text = arrayOfPlayerStats[rowClicked].playerName
