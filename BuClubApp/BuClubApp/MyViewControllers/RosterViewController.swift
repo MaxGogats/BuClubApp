@@ -21,6 +21,7 @@ class RosterViewController : UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         players = createPlayerArray()
+        
     }
     
     func createPlayerArray() -> [Player] {
