@@ -17,6 +17,8 @@ class MainTabController : UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.selectedIndex = 1
+
         
         //This code retrieves HTML on a background thread
         let dispatchQueue = DispatchQueue(label: "QueueIdentification", qos: .background)
@@ -38,9 +40,6 @@ class MainTabController : UITabBarController {
                         let statsTable : [Element] = try div.getElementsByClass("team-stats-table").array()
                         print(statsTable)
                     }
-                    
-                    
-                    
                     
                 } catch {
                     // contents could not be loaded
