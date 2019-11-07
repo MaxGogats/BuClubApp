@@ -18,12 +18,12 @@ class stats {
     var obp : String
     var rbi : String
     
-    init(name: String, abs: String, numHits1: String, avg1: String, obp1: String, rbi1: String){
+    init(name: String, abs: String, runs: String, hits: String, avg1: String, rbi1: String){
         playerName = name
         ab = abs
-        numHits = numHits1
-        avg = avg1
-        obp = obp1
+        numHits = runs
+        avg = hits
+        obp = avg1
         rbi = rbi1
     }
 }

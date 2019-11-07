@@ -14,6 +14,8 @@ var statsHTML = ""
 
 class MainTabController : UITabBarController {
     
+    var names = Elements()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,13 +35,36 @@ class MainTabController : UITabBarController {
                     statsHTML = contents
                     
                     
-                    let doc: Document = try SwiftSoup.parse(statsHTML)
-                    let table : [Element] = try doc.getElementsByTag("div").array()
-                   
-                    for div in table {
-                        let statsTable : [Element] = try div.getElementsByClass("team-stats-table").array()
-                        print(statsTable)
+                    //let doc: Document = try SwiftSoup.parse(statsHTML)
+                    let doc : Document = try SwiftSoup.parse(statsHTML)
+                    let table : Elements = try doc.getElementsByClass("collclubsports-component active")
+                
+                    let hittingStats: Element? = table.get(1)
+                    
+                    let data : Elements? = try hittingStats?.getElementsByTag("td")
+                
+                    var count = 0
+                    
+                    
+                    
+                    /*for num1 in data! {
+                       print(num1)
+                    }*/
+                    
+                    
+                    
+                    
+                   for ele in table{
+                        //print(ele)
                     }
+                    
+                   /* for ele in statsData{
+                        print(ele)
+                    }*/
+                    
+                  
+                    
+                    print("Done")
                     
                 } catch {
                     // contents could not be loaded
