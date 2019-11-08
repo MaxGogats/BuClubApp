@@ -31,16 +31,10 @@ class playerInfoVC: UIViewController {
         
         pitching.font = UIFont(name: "Copperplate-Bold", size: 30)
              pitching.text = "PITCHING"
-        
-        changeNames()
+    
         loadPlayerData()
     }
     
-    func changeNames(){
-        for pName in name{
-        
-        }
-    }
     
     func loadPlayerData(){
         var playerStats: [stats] = []
@@ -49,11 +43,14 @@ class playerInfoVC: UIViewController {
         nameLabel.titleLabel?.font = UIFont(name: "Copperplate-Bold", size: 40)
         nameLabel.titleLabel?.numberOfLines = 2
         
-        
-        
+        var index = 0
+        for name in names {
+            let tempStat = stats(name: name, abs: abs[index], runs: runs[index], hits: hits[index], avg1: avg[index], rbi1: rbi[index])
+            
+            playerStats.append(tempStat)
+        }
         
         //playerName.text = arrayOfPlayerStats[rowClicked].playerName
        // playerAvg.text = arrayOfPlayerStats[rowClicked].avg
     }
-    
 }

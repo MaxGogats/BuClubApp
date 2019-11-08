@@ -16,10 +16,9 @@ var abs = [String]()
 var runs = [String]()
 var hits = [String]()
 var avg = [String]()
-var obp = [String]()
+var rbi = [String]()
 
 class MainTabController : UITabBarController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.selectedIndex = 1
@@ -73,7 +72,7 @@ class MainTabController : UITabBarController {
                         } else if(index == 12){
                             try avg.append(td.text())
                         } else if(index == 13){
-                            try obp.append(td.text())
+                            try rbi.append(td.text())
                         } else if(index == 23){
                             index = 0
                         }
