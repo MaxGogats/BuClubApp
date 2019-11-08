@@ -11,14 +11,17 @@ import SwiftSoup
 import UIKit
 
 var statsHTML = ""
+var names = [String]()
+var abs = [String]()
+var runs = [String]()
+var hits = [String]()
+var avg = [String]()
+var obp = [String]()
 
 class MainTabController : UITabBarController {
-    
-    var names = [String]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.selectedIndex = 1
 
         
@@ -27,25 +30,23 @@ class MainTabController : UITabBarController {
         dispatchQueue.async{
             
             //Background task done here
-            print("loading html...\n\n\n")
+            print("\nloading html...\n")
             
             if let url = URL(string: "https://www.clubbaseball.org/league/team/?team=36c1ba31-b586-4be7-a37b-343c6d9363ee&season=46d3ea9a-a080-4273-befb-58b30c2adb01#team-stats") {
                 do {
                     let contents = try String(contentsOf: url)
                     statsHTML = contents
                     
-                    
-                    //let doc: Document = try SwiftSoup.parse(statsHTML)
                     let doc : Document = try SwiftSoup.parse(statsHTML)
-                    let table : Elements = try doc.getElementsByClass("collclubsports-component active")
+                    let fullTable : Elements = try doc.getElementsByClass("collclubsports-component active")
                 
-                    let hittingStats: Element? = table.get(1) //retrieves the hitting table that I need (3 tables, roster, hitting, pitching)
+                    let hittingStats: Element? = fullTable.get(1) //retrieves the hitting table that I need (3 tables, roster, hitting, pitching)
                     
-                    let data : Elements? = try hittingStats?.getElementsByTag("td") //retrieve all td tags
-                    let hrefNames : Elements? = try data!.select("a[href]") //href names of players
+                    let data : Elements? = try hittingStats?.getElementsByTag("td") //retrieve all hitting data for each player
+                    let hrefNames : Elements? = try data!.select("a[href]") //names of players with HREF link included
                     
                     for h in hrefNames! {
-                        self.names.append(try h.text()) //retrieve names of all the hitters
+                        names.append(try h.text()) //retrieve names of all the hitters, removes href
                     }
                     
                     let undesiredElements : Elements? = try data!.select("a[href]") // delete href that I don't need anymore
@@ -53,22 +54,34 @@ class MainTabController : UITabBarController {
                     
                     try data!.get(0).remove()
                     
-                    var count = 0
+                   /* var count = 0
                     for num1 in data! {
-                        print(num1, count)
+                        print(num1, count) //prints all tds and index
                         count = count+1
-                    }
+                    }*/
 
-                    var index = -1
+                    var index = 0
+                    
+                    //puts stats into right arrays
                     for td in data! {
-                        
-                        index = index+1
-                        
+                        if(index == 1){
+                            try abs.append(td.text())
+                        } else if(index == 2){
+                            try runs.append(td.text())
+                        } else if(index == 3){
+                            try hits.append(td.text())
+                        } else if(index == 12){
+                            try avg.append(td.text())
+                        } else if(index == 13){
+                            try obp.append(td.text())
+                        } else if(index == 23){
+                            index = 0
+                        }
+                        index = index + 1
                     }
-                    
-                    
                     
                     print("Done")
+                    
                 } catch {
                     // contents could not be loaded
                     print("Contents not loaded!")

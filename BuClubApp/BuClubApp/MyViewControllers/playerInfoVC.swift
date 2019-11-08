@@ -13,6 +13,12 @@ import SwiftSoup
 
 class playerInfoVC: UIViewController {
     
+
+    @IBOutlet weak var rbiNum: UILabel!
+    @IBOutlet weak var obpNum: UILabel!
+    @IBOutlet weak var avgNum: UILabel!
+    @IBOutlet weak var hitsNum: UILabel!
+    @IBOutlet weak var atBatsNum: UILabel!
     @IBOutlet weak var hitting: UILabel!
     @IBOutlet weak var nameLabel: UIButton!
     @IBOutlet weak var pitching: UILabel!
@@ -30,17 +36,16 @@ class playerInfoVC: UIViewController {
         loadPlayerData()
     }
     
-    
     func changeNames(){
         for pName in name{
-            
+        
         }
     }
     
     func loadPlayerData(){
         var playerStats: [stats] = []
         
-        nameLabel.setTitle(name[rowClicked-1], for: .normal)
+        nameLabel.setTitle(name[rowClicked-1], for: .normal) //sets name for title
         nameLabel.titleLabel?.font = UIFont(name: "Copperplate-Bold", size: 40)
         nameLabel.titleLabel?.numberOfLines = 2
         
