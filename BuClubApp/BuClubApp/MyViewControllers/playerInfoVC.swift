@@ -12,8 +12,6 @@ import SwiftSoup
 
 
 class playerInfoVC: UIViewController {
-    
-
     @IBOutlet weak var rbiNum: UILabel!
     @IBOutlet weak var obpNum: UILabel!
     @IBOutlet weak var avgNum: UILabel!
@@ -44,11 +42,14 @@ class playerInfoVC: UIViewController {
         nameLabel.titleLabel?.numberOfLines = 2
         
         var index = 0
-        for name in names {
-            let tempStat = stats(name: name, abs: abs[index], runs: runs[index], hits: hits[index], avg1: avg[index], rbi1: rbi[index])
+       // for name in names {
+            //let tempStat = stats(name: name, abs: abs[index], runs: runs[index], hits: hits[index], avg1: avg[index], rbi1: rbi[index])
             
-            playerStats.append(tempStat)
-        }
+            //playerStats.append(tempStat)
+           // index = index + 1
+       // }
+        
+    
         
         //playerName.text = arrayOfPlayerStats[rowClicked].playerName
        // playerAvg.text = arrayOfPlayerStats[rowClicked].avg
