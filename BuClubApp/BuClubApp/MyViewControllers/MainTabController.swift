@@ -21,7 +21,7 @@ var rbi = [String]()
 class MainTabController : UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.selectedIndex = 1
+        //self.selectedIndex = 1
 
         
         //This code retrieves HTML on a background thread
@@ -52,12 +52,6 @@ class MainTabController : UITabBarController {
                     try undesiredElements?.remove()
                     
                     try data!.get(0).remove()
-                    
-                   /* var count = 0
-                    for num1 in data! {
-                        print(num1, count) //prints all tds and index
-                        count = count+1
-                    }*/
 
                     var index = 0
                     
@@ -78,9 +72,7 @@ class MainTabController : UITabBarController {
                         }
                         index = index + 1
                     }
-                    
                     print("Done")
-                    
                 } catch {
                     // contents could not be loaded
                     print("Contents not loaded!")
