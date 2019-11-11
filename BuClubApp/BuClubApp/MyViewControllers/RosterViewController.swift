@@ -98,8 +98,7 @@ class RosterViewController : UIViewController, UITableViewDataSource, UITableVie
                 let decimalRange = stripped.rangeOfCharacter(from: decimalChars)
                 let letters = NSCharacterSet.letters
                 let range = stripped.rangeOfCharacter(from: letters)
-                
-                
+            
                 if decimalRange != nil {
                     if let test = range{
                         
@@ -121,7 +120,7 @@ class RosterViewController : UIViewController, UITableViewDataSource, UITableVie
             }
             
         } catch Exception.Error(let type, let message){
-            print("")
+            print(message)
         } catch{
             print("")
             }
@@ -142,7 +141,6 @@ class RosterViewController : UIViewController, UITableViewDataSource, UITableVie
         cell.setPlayer(player: player)
         
         return cell
-            
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

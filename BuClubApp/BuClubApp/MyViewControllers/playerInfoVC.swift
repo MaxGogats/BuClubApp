@@ -10,48 +10,28 @@ import Foundation
 import UIKit
 import SwiftSoup
 
-
 class playerInfoVC: UIViewController {
-    @IBOutlet weak var rbiNum: UILabel!
-    @IBOutlet weak var obpNum: UILabel!
-    @IBOutlet weak var avgNum: UILabel!
-    @IBOutlet weak var hitsNum: UILabel!
-    @IBOutlet weak var atBatsNum: UILabel!
-    @IBOutlet weak var hitting: UILabel!
-    @IBOutlet weak var nameLabel: UIButton!
-    @IBOutlet weak var pitching: UILabel!
     
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var rbiNum: UILabel!
+    @IBOutlet weak var avgNum: UILabel!
+    @IBOutlet weak var runsNum: UILabel!
+    @IBOutlet weak var hitsNum: UILabel!
+    @IBOutlet weak var abNum: UILabel!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameLabel.text = name[rowClicked-1]
+        nameLabel.font = UIFont(name: "Copperplate-Bold", size: CGFloat(40))
+        nameLabel.numberOfLines = 2
+        nameLabel.textAlignment = .center
         
-        hitting.font = UIFont(name: "Copperplate-Bold", size: 30)
-        hitting.text = "HITTING"
-        
-        pitching.font = UIFont(name: "Copperplate-Bold", size: 30)
-             pitching.text = "PITCHING"
-    
         loadPlayerData()
     }
     
     
     func loadPlayerData(){
-        var playerStats: [stats] = []
-        
-        nameLabel.setTitle(name[rowClicked-1], for: .normal) //sets name for title
-        nameLabel.titleLabel?.font = UIFont(name: "Copperplate-Bold", size: 40)
-        nameLabel.titleLabel?.numberOfLines = 2
-        
-        var index = 0
-       // for name in names {
-            //let tempStat = stats(name: name, abs: abs[index], runs: runs[index], hits: hits[index], avg1: avg[index], rbi1: rbi[index])
+    //make stats structures, sort by alphabetical name
             
-            //playerStats.append(tempStat)
-           // index = index + 1
-       // }
-        
-    
-        
-        //playerName.text = arrayOfPlayerStats[rowClicked].playerName
-       // playerAvg.text = arrayOfPlayerStats[rowClicked].avg
-    }
+        }
 }

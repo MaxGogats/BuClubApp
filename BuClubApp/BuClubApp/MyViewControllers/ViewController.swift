@@ -13,10 +13,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let mainTabController = storyboard?.instantiateViewController(identifier: "MainTabController") as! MainTabController
-        
-        present(mainTabController, animated: true, completion: nil)
-        
     }
 }
 

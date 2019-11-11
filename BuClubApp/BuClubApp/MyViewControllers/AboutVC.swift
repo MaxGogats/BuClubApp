@@ -16,22 +16,25 @@ class AboutVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let size = CGSize(width: CGFloat(50), height: CGFloat(50))
+        //let size = CGSize(width: collectionView.frame.width/2, height: collectionView.frame.width)
+        let size = CGSize(width: CGFloat(100), height: CGFloat(100))
         return size
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! collectionViewCell
         
-        cell.cellPicture.image = UIImage(named: "team")
+       // var images = [UIImage]()
+        cell.backgroundColor = .green
         
         return cell
     }

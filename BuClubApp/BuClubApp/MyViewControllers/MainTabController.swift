@@ -17,13 +17,14 @@ var runs = [String]()
 var hits = [String]()
 var avg = [String]()
 var rbi = [String]()
+var statsArray = [stats]()
+
 
 class MainTabController : UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.selectedIndex = 1
+        self.selectedIndex = 1
 
-        
         //This code retrieves HTML on a background thread
         let dispatchQueue = DispatchQueue(label: "QueueIdentification", qos: .background)
         dispatchQueue.async{
@@ -81,6 +82,16 @@ class MainTabController : UITabBarController {
                 // the URL was bad!
                 print("Bad URL!")
             }
+            
+            var index = 0
+                  for _ in names {
+                      let s1 = stats(name: names[index], abs: abs[index], runs: runs[index], hits: hits[index], avg1: avg[index], rbi1: rbi[index])
+                      statsArray.append(s1)
+                      index = index + 1
+                    print(s1.playerName)
+                    print(s1.numHits)
+                  }
         }
+      
     }
 }
