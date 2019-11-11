@@ -7,4 +7,4 @@ Used SwiftSoup to parse HTML table from the above website to display the roster 
 
 Problems that I face now are that the application loads the cells before the html is done parsing causing funky behavior. In the future I want the application to remember the stats that it has currently and then check the website to see if any of the data changed therefore the data is cached. Also want to retrieve information from the games online instead of entering manually. 
 
-Added a collection view in the about format instead of what I had previously created a photo gallery of the team which is currently just green squares because I don't have pictures, but I learned to work with the collection view which happens to be pretty similar to implement as the tableview cells. 
+Added a collection view in the about format instead of what I had previously created a photo gallery of the team which is currently just green squares because I don't have pictures, but I learned to work with the collection view which happens to be pretty similar to implement as the tableview cells. Designing the collection view in a pretty way is also difficult to do and I need to spend more time with it. 
