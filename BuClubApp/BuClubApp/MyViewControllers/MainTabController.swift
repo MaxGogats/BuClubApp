@@ -89,7 +89,7 @@ class MainTabController : UITabBarController {
             }
             
             for stat in statsArray{
-                print(stat.playerName, stat.ab, stat.numRuns, stat.numHits, stat.rbi, stat.avg)
+               // print(stat.playerName, stat.ab, stat.numRuns, stat.numHits, stat.rbi, stat.avg)
             }
         }
     }
