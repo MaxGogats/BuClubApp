@@ -10,4 +10,5 @@ import Foundation
 import UIKit
 
 class collectionViewCell : UICollectionViewCell{
+    
 }

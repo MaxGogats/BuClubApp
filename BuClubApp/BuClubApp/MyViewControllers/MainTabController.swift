@@ -24,7 +24,7 @@ class MainTabController : UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.selectedIndex = 1
-
+        
         //This code retrieves HTML on a background thread
         let dispatchQueue = DispatchQueue(label: "QueueIdentification", qos: .background)
         dispatchQueue.async{
@@ -39,37 +39,29 @@ class MainTabController : UITabBarController {
                     
                     let doc : Document = try SwiftSoup.parse(statsHTML)
                     let fullTable : Elements = try doc.getElementsByClass("collclubsports-component active")
-                
+                    
                     let hittingStats: Element? = fullTable.get(1) //retrieves the hitting table that I need (3 tables, roster, hitting, pitching)
                     
                     let data : Elements? = try hittingStats?.getElementsByTag("td") //retrieve all hitting data for each player
-                    let hrefNames : Elements? = try data!.select("a[href]") //names of players with HREF link included
-                    
-                    for h in hrefNames! {
-                        names.append(try h.text()) //retrieve names of all the hitters, removes href
-                    }
-                    
-                    let undesiredElements : Elements? = try data!.select("a[href]") // delete href that I don't need anymore
-                    try undesiredElements?.remove()
-                    
-                    try data!.get(0).remove()
-
-                    var index = 0
                     
                     //puts stats into right arrays
-                    for td in data! {
-                        if(index == 1){
+                    var index = 0
+                    for td in data!{
+                        
+                        if(index == 0){
+                            try names.append(td.text())
+                        } else if (index == 1){
                             try abs.append(td.text())
                         } else if(index == 2){
                             try runs.append(td.text())
                         } else if(index == 3){
                             try hits.append(td.text())
+                        } else if(index == 7){
+                            try rbi.append(td.text())
                         } else if(index == 12){
                             try avg.append(td.text())
-                        } else if(index == 13){
-                            try rbi.append(td.text())
-                        } else if(index == 23){
-                            index = 0
+                        } else if(index == 22){
+                            index = -1
                         }
                         index = index + 1
                     }
@@ -82,16 +74,23 @@ class MainTabController : UITabBarController {
                 // the URL was bad!
                 print("Bad URL!")
             }
+        
+            var i = 0
+            for _ in 0...19{
+               // print(names[i], abs[i], hits[i], avg[i], rbi[i])
+                i = i+1
+            }
             
-            var index = 0
-                  for _ in names {
-                      let s1 = stats(name: names[index], abs: abs[index], runs: runs[index], hits: hits[index], avg1: avg[index], rbi1: rbi[index])
-                      statsArray.append(s1)
-                      index = index + 1
-                    print(s1.playerName)
-                    print(s1.numHits)
-                  }
+            var n = 0
+            for _ in names {
+                let s1 = stats(name: names[n], abs: abs[n], runs: runs[n], hits: hits[n], avg1: avg[n], rbi1: rbi[n])
+                statsArray.append(s1)
+                n = n+1
+            }
+            
+            for stat in statsArray{
+                print(stat.playerName, stat.ab, stat.numRuns, stat.numHits, stat.rbi, stat.avg)
+            }
         }
-      
     }
 }

@@ -20,13 +20,13 @@ class AboutVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         //let size = CGSize(width: collectionView.frame.width/2, height: collectionView.frame.width)
-        let size = CGSize(width: CGFloat(100), height: CGFloat(100))
+        let size = CGSize(width: CGFloat(50), height: CGFloat(50))
         return size
     }
     

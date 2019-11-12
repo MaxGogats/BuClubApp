@@ -15,7 +15,7 @@ class stats {
     var ab : String
     var numHits : String
     var avg : String
-    var obp : String
+    var numRuns : String
     var rbi : String
     
     init(name: String, abs: String, runs: String, hits: String, avg1: String, rbi1: String){
@@ -23,7 +23,7 @@ class stats {
         ab = abs
         numHits = runs
         avg = hits
-        obp = avg1
+        numRuns = runs
         rbi = rbi1
     }
 }
