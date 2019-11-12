@@ -11,36 +11,28 @@ import UIKit
 
 class SchedulePopUpVC : UIViewController {
     @IBOutlet weak var score: UILabel!
+    @IBOutlet weak var games: UILabel!
     
     override func viewDidLoad() {
-       
         super.viewDidLoad()
         
         score.font = UIFont(name: "HelveticaNeue-Bold", size: 25)
         score.numberOfLines = 2
         score.textAlignment = .center
         score.text = series[scheduleRowClicked]
+        
+        var seriesGames : [String] = []
+        
+        seriesGames.append("L 2-4\n\nL 4-6")
+        seriesGames.append("W 6-7\n\nL 9-3")
+        seriesGames.append("W 2-7\n\nW 0-6\n\nL 8-7")
+        seriesGames.append("W 0-4\n\nW 2-4\n\nL 4-3")
+        seriesGames.append("L 4-5\n\nL 2-7\n\nW 4-1")
+        
+        games.numberOfLines = 10
+        games.text = seriesGames[scheduleRowClicked]
+        games.font = UIFont(name: "HelveticaNeue", size: 15)
     }
-    
-    /*scores.append("L 2-4")
-    scores.append("L 4-6")
-    
-    scores.append("W 6-7")
-    scores.append("L 9-3")
-    
-    scores.append("W 2-7")
-    scores.append("W 0-6")
-    scores.append("L 8-7")
-    
-    scores.append("W 0-4")
-    scores.append("W 2-4")
-    scores.append("L 4-3")
-    
-    scores.append("L 4-5")
-    scores.append("L 2-7")
-    scores.append("W 4-1")*/
-    
-    
 }
 
 

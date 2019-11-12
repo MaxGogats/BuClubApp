@@ -21,7 +21,7 @@ class playerInfoVC: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = name[rowClicked-1]
+        nameLabel.text = fullRoster[rowClicked-1]
         nameLabel.font = UIFont(name: "Copperplate-Bold", size: CGFloat(40))
         nameLabel.numberOfLines = 2
         nameLabel.textAlignment = .center

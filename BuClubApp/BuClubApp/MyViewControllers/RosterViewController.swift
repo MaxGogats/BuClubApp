@@ -12,7 +12,7 @@ import SwiftSoup
 
 var players : [Player] = []
 var rowClicked : Int = 0
- var name = [String]()
+ var fullRoster = [String]()
 
 class RosterViewController : UIViewController, UITableViewDataSource, UITableViewDelegate{
     
@@ -89,7 +89,7 @@ class RosterViewController : UIViewController, UITableViewDataSource, UITableVie
                 let stripped = try info.text()
                 
                 if stripped.contains(" "){
-                    name.append(stripped)
+                    fullRoster.append(stripped)
                     used = true
                 }
                 
@@ -115,7 +115,7 @@ class RosterViewController : UIViewController, UITableViewDataSource, UITableVie
             }
             
            for n in 0..<numPlayers{
-                let p1 = Player(pos: pos[n], playerName: name[n], playerNumber: num[n])
+                let p1 = Player(pos: pos[n], playerName: fullRoster[n], playerNumber: num[n])
                 players.append(p1)
             }
             

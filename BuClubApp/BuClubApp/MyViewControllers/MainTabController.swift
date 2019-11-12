@@ -17,7 +17,8 @@ var runs = [String]()
 var hits = [String]()
 var avg = [String]()
 var rbi = [String]()
-var statsArray = [stats]()
+var statsArray = [Stats]()
+var rosterStatArray = [Stats]()
 
 
 class MainTabController : UITabBarController {
@@ -74,22 +75,29 @@ class MainTabController : UITabBarController {
                 // the URL was bad!
                 print("Bad URL!")
             }
-        
-            var i = 0
-            for _ in 0...19{
-               // print(names[i], abs[i], hits[i], avg[i], rbi[i])
-                i = i+1
+            
+            var count = 0
+            for _ in fullRoster {
+                let temp = Stats(name: fullRoster[count], abs: "0", hits: "0", average: "0", runs: "0", ribby: "0")
+                rosterStatArray.append(temp)
+                count = count+1
             }
             
             var n = 0
-            for _ in names {
-                let s1 = stats(name: names[n], abs: abs[n], runs: runs[n], hits: hits[n], avg1: avg[n], rbi1: rbi[n])
+            for _ in fullRoster {
+                let s1 = Stats(name: names[n], abs: abs[n], hits: hits[n], average: avg[n], runs: runs[n], ribby: rbi[n])
                 statsArray.append(s1)
                 n = n+1
             }
             
-            for stat in statsArray{
-               // print(stat.playerName, stat.ab, stat.numRuns, stat.numHits, stat.rbi, stat.avg)
+            for player in rosterStatArray{
+                for playerStatsName in statsArray {
+                    if(player.playerName.elementsEqual(playerStatsName.playerName)){
+                        print(playerStatsName.playerName)
+                    } else {
+                        print("not equal")
+                    }
+                }
             }
         }
     }

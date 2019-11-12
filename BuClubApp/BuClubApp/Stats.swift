@@ -10,7 +10,7 @@ import Foundation
 
 import UIKit
 
-class stats {
+class Stats {
     var playerName : String
     var ab : String
     var numHits : String
@@ -18,12 +18,15 @@ class stats {
     var numRuns : String
     var rbi : String
     
-    init(name: String, abs: String, runs: String, hits: String, avg1: String, rbi1: String){
+    init(name: String, abs: String, hits: String, average: String, runs: String, ribby: String){
         playerName = name
         ab = abs
-        numHits = runs
-        avg = hits
+        numHits = hits
+        avg = average
         numRuns = runs
-        rbi = rbi1
+        rbi = ribby
     }
 }
+
+
+//ab, hits, avg, rbi 
