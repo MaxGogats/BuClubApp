@@ -17,7 +17,12 @@
        
         @IBOutlet weak var tableView: UITableView!
         
-       
+       /*
+         1. Add future games into the view
+         2. Add dates for the games
+         3. Add winning / losing pitchers for the games
+         4. add little scroll bar that you can see the schedule from last year (ambitious)
+        */
         
         override func viewDidLoad() {
             super.viewDidLoad()

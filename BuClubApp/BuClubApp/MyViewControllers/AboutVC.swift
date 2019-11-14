@@ -12,36 +12,19 @@ import WebKit
 import Foundation
 import UIKit
 
-class AboutVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
-    
+class AboutVC: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    }
-    
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+       /* bingTitle.textAlignment = .center
+        bingTitle.font = UIFont(name: "EuphemiaUCAS-Bold", size: CGFloat(20))
+        bingTitle.text = "Binghamton Club Baseball"
+        bingTitle.numberOfLines = 2
         
-        //let size = CGSize(width: collectionView.frame.width/2, height: collectionView.frame.width)
-        let size = CGSize(width: CGFloat(50), height: CGFloat(50))
-        return size
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
+        photosButton.titleLabel?.font = UIFont(name: "SanFranciscoDisplay-Black", size: CGFloat(18))
+        photosButton.titleLabel?.textAlignment = .center
         
-       // var images = [UIImage]()
-        cell.backgroundColor = .green
-        
-        return cell
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+        */
     }
 }
 

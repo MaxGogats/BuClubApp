@@ -23,7 +23,7 @@ class playerInfoVC: UIViewController {
         super.viewDidLoad()
         nameLabel.text = fullRoster[rowClicked-1]
         nameLabel.font = UIFont(name: "Copperplate-Bold", size: CGFloat(40))
-        nameLabel.numberOfLines = 2
+        nameLabel.numberOfLines = 2 
         nameLabel.textAlignment = .center
         
         loadPlayerData()
