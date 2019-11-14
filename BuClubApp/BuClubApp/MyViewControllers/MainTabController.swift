@@ -24,7 +24,7 @@ var rosterStatArray = [Stats]()
 class MainTabController : UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.selectedIndex = 0
+        self.selectedIndex = 2
         
         //This code retrieves HTML on a background thread
         let dispatchQueue = DispatchQueue(label: "QueueIdentification", qos: .background)

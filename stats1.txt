@@ -1,0 +1,564 @@
+commit bb6648f8bcaf0d854c93d9fcfcd256216c8bcfd7
+Author: mgogats <32463812+mgogats@users.noreply.github.com>
+Date:   Mon Nov 11 00:53:50 2019 -0500
+
+    Update README.md
+
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit e7c73f0d221768b61855456165c44fe3d6201989
+Author: mgogats <32463812+mgogats@users.noreply.github.com>
+Date:   Mon Nov 11 00:52:38 2019 -0500
+
+    Update README.md
+
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit e08b04f7c4b03a1a03b74ce6ecd13b282f8fdf2a
+Author: mgogats <32463812+mgogats@users.noreply.github.com>
+Date:   Mon Nov 11 00:38:07 2019 -0500
+
+    Update README.md
+
+ README.md | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+commit 798c59d605c0ba66dfc276e37472aadc35843afc
+Author: Max Gogats <mgogats@gmail.com>
+Date:   Mon Nov 11 00:32:29 2019 -0500
+
+    got stats to display
+
+ .../UserInterfaceState.xcuserstate                 | Bin 128579 -> 152827 bytes
+ .../BuClubApp/MyViewControllers/AboutVC.swift      |   9 +++--
+ .../MyViewControllers/MainTabController.swift      |  15 +++++++-
+ .../MyViewControllers/RosterViewController.swift   |   6 +--
+ .../MyViewControllers/ViewController.swift         |   4 --
+ .../MyViewControllers/collectionViewCell.swift     |   2 -
+ .../BuClubApp/MyViewControllers/playerInfoVC.swift |  42 ++++++---------------
+ 7 files changed, 32 insertions(+), 46 deletions(-)
+
+commit b3531fb44e6953260e1a02899a6d052adcb18a79
+Author: Max Gogats <mgogats@gmail.com>
+Date:   Sun Nov 10 22:29:02 2019 -0500
+
+    app doesn't crash anymore
+
+ BuClubApp/BuClubApp.xcodeproj/project.pbxproj      |   8 ++--
+ .../UserInterfaceState.xcuserstate                 | Bin 103387 -> 128579 bytes
+ .../Contents.json                                  |   0
+ .../IMG_0002.JPG                                   | Bin
+ .../BuClubApp/MyViewControllers/AboutVC.swift      |  41 +++++++++++----------
+ .../MyViewControllers/MainTabController.swift      |  10 +----
+ .../MyViewControllers/collectionView.swift         |  26 -------------
+ .../MyViewControllers/collectionViewCell.swift     |  15 ++++++++
+ 8 files changed, 42 insertions(+), 58 deletions(-)
+
+commit 832ad27083c3d29c13d6a8b431e9b772ae894ddb
+Author: Max Gogats <mgogats@gmail.com>
+Date:   Fri Nov 8 12:42:31 2019 -0500
+
+    stats VC started crashing unexpectadly so I added collectionViewCell for a nice little photo gallery
+
+ BuClubApp/BuClubApp.xcodeproj/project.pbxproj      |   4 ++++
+ .../UserInterfaceState.xcuserstate                 | Bin 95960 -> 103387 bytes
+ .../xcdebugger/Breakpoints_v2.xcbkptlist           |  18 --------------
+ .../MyViewControllers/collectionView.swift         |  26 +++++++++++++++++++++
+ .../BuClubApp/MyViewControllers/playerInfoVC.swift |  13 ++++++-----
+ 5 files changed, 37 insertions(+), 24 deletions(-)
+
+commit 288cfba1b3b22e689ddd58779d8dcaf68b34b698
+Author: Max Gogats <mgogats@gmail.com>
+Date:   Thu Nov 7 21:07:53 2019 -0500
+
+    put stats into an array of playerstats, have to figure out how to match the player stats with the right tab because the roster names and stats are out of order and also not every player has batting stats so I need to set default value to 0's
+
+ .../UserInterfaceState.xcuserstate                  | Bin 92747 -> 95960 bytes
+ .../xcdebugger/Breakpoints_v2.xcbkptlist            |  18 ++++++++++++++++++
+ .../MyViewControllers/MainTabController.swift       |   5 ++---
+ .../BuClubApp/MyViewControllers/playerInfoVC.swift  |  17 +++++++----------
+ 4 files changed, 27 insertions(+), 13 deletions(-)
+
+commit 25ad46debf5d6d47143ba5d2cdbe38d67b9b22bf
+Author: Max Gogats <mgogats@gmail.com>
+Date:   Thu Nov 7 20:41:54 2019 -0500
+
+    successfully parsed data from html into the correct arrays, next step is to enter the stats into the stats structure and implement them into the playerinfo popup VC
+
+ .../UserInterfaceState.xcuserstate                 | Bin 92115 -> 92747 bytes
+ .../MyViewControllers/MainTabController.swift      |  55 +++++++++++++--------
+ .../BuClubApp/MyViewControllers/playerInfoVC.swift |  11 +++--
+ 3 files changed, 42 insertions(+), 24 deletions(-)
+
+commit 679f1d1b8aef7a673d299fe77926546795f865ba
+Author: Max Gogats <mgogats@gmail.com>
+Date:   Thu Nov 7 18:07:21 2019 -0500
+
+    got the names entered correctly into an array, have to figure out how to find every 23rd index to enter into the stats structure
+
+ .../UserInterfaceState.xcuserstate                 | Bin 91332 -> 92115 bytes
+ .../MyViewControllers/MainTabController.swift      |  41 +++++++++++----------
+ 2 files changed, 22 insertions(+), 19 deletions(-)
+
+commit a81ff3ae50eab31f900a55fbf69ad4bcd50e020f
+Author: Max Gogats <mgogats@gmail.com>
+Date:   Thu Nov 7 17:10:20 2019 -0500
+
+    very difficult to parse html table data from website, difficulties coming from html being older version so swiftsoup does not have functions to deal with the DOM of the HTML
+
+ .../UserInterfaceState.xcuserstate                 | Bin 90863 -> 91332 bytes
+ .../BuClubApp/MyViewControllers/AboutVC.swift      |  14 +++-----
+ .../MyViewControllers/MainTabController.swift      |  37 +++++++++++++++++----
+ BuClubApp/BuClubApp/stats.swift                    |   8 ++---
+ 4 files changed, 40 insertions(+), 19 deletions(-)
+
+commit 6c877e6ba8fd6d9c8105cf10bdeffd5feffd5b5b
+Author: Max Gogats <mgogats@gmail.com>
+Date:   Wed Nov 6 16:08:20 2019 -0500
+
+    animated about screen,set the default tab to the about tab, took more time then it should have
+
+ .../UserInterfaceState.xcuserstate                  | Bin 76876 -> 90863 bytes
+ BuClubApp/BuClubApp/MyViewControllers/AboutVC.swift |  19 ++++++++++++++++---
+ .../MyViewControllers/MainTabController.swift       |   5 ++---
+ 3 files changed, 18 insertions(+), 6 deletions(-)
+
+commit 7eca20d4942faa3c3c293ad2b3045a8f99d11807
+Author: Max Gogats <mgogats@gmail.com>
+Date:   Tue Nov 5 11:31:37 2019 -0500
+
+    retrieved stats at runtime on background thread and parsed the HTML using swiftsoup into retrieving the stats table I desired
+
+ .../UserInterfaceState.xcuserstate                 | Bin 88673 -> 76876 bytes
+ .../MyViewControllers/MainTabController.swift      |  55 +++++++++++----------
+ 2 files changed, 29 insertions(+), 26 deletions(-)
+
+commit eb440f30ac801e336be230973152142b855c0585
+Author: Max Gogats <mgogats@gmail.com>
+Date:   Mon Nov 4 15:33:14 2019 -0500
+
+    loaded html, trying to parse stats
+
+ BuClubApp/.DS_Store                                 | Bin 8196 -> 8196 bytes
+ .../UserInterfaceState.xcuserstate                  | Bin 76102 -> 88673 bytes
+ .../MyViewControllers/MainTabController.swift       |  20 +++++++++++++++-----
+ 3 files changed, 15 insertions(+), 5 deletions(-)
+
+commit 46a05ad6646463a7dce8410e59eabedb3cefc6a2
+Author: Max Gogats <mgogats@gmail.com>
+Date:   Mon Nov 4 10:38:14 2019 -0500
+
+    able to load HTML into my project, next step to parse the html and enter the stats
+
+ BuClubApp/.DS_Store                                | Bin 8196 -> 8196 bytes
+ .../UserInterfaceState.xcuserstate                 | Bin 74067 -> 76102 bytes
+ .../MyViewControllers/MainTabController.swift      |  24 ++++++
+ .../MyViewControllers/RosterViewController.swift   |   1 +
+ .../MyViewControllers/schedulePopUpVC.swift        |  82 +--------------------
+ 5 files changed, 27 insertions(+), 80 deletions(-)
+
+commit 0ac4d0a3014275f4c29e70c66cecadbfcccaa420
+Author: Max Gogats <mgogats@gmail.com>
+Date:   Sun Nov 3 00:55:34 2019 -0400
+
+    added back button, needs citation
+
+ .../UserInterfaceState.xcuserstate                 | Bin 74454 -> 74067 bytes
+ .../MyViewControllers/schedulePopUpVC.swift        |  82 ++++++++++++++++++++-
+ 2 files changed, 81 insertions(+), 1 deletion(-)
+
+commit 2e2529af5f13b4b0c5cd73eedf4a52a6d131b8fc
+Author: Max Gogats <mgogats@gmail.com>
+Date:   Fri Nov 1 15:04:03 2019 -0400
+
+    added a navigation controller / view controller that is going to be apart of the schedule interface, when you click on a score, opens new page that will have more information about the game
+
+ BuClubApp/BuClubApp.xcodeproj/project.pbxproj      |   4 +
+ .../UserInterfaceState.xcuserstate                 | Bin 70779 -> 74454 bytes
+ .../BuClubApp/MyViewControllers/playerInfoVC.swift |   4 +-
+ .../MyViewControllers/schedulePopUpVC.swift        |  17 +
+ commits.txt                                        | 371 +++++++++++++++++++++
+ 5 files changed, 394 insertions(+), 2 deletions(-)
+
+commit 4536660d39131734abfed1e763f90071e591b44e
+Author: mgogats <32463812+mgogats@users.noreply.github.com>
+Date:   Mon Oct 28 15:12:31 2019 -0400
+
+    Update README.md
+
+ README.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+commit 22e4d6d41f24c4dd41c0700e905313bea84c4903
+Author: Max Gogats <mgogats@gmail.com>
+Date:   Mon Oct 28 11:40:41 2019 -0400
+
+    finished project
+
+ BuClubApp/BuClubApp.xcodeproj/project.pbxproj      |   8 +++
+ .../UserInterfaceState.xcuserstate                 | Bin 69229 -> 70779 bytes
+ .../MyViewControllers/RosterViewController.swift   |  63 ++++++++++----------
+ .../BuClubApp/MyViewControllers/playerInfoVC.swift |  27 +++++----
+ .../BuClubApp/MyViewControllers/scheduleVC.swift   |  64 +++++++++++++++++++++
+ BuClubApp/BuClubApp/scheduleCell.swift             |  21 +++++++
+ 6 files changed, 142 insertions(+), 41 deletions(-)
+
+commit d7e059ee25869ebe3ce08921f23a2400596e3a28
+Author: Max Gogats <mgogats@gmail.com>
+Date:   Sun Oct 27 22:20:49 2019 -0400
+
+    got label to work
+
+ .../UserInterfaceState.xcuserstate                  | Bin 62811 -> 69229 bytes
+ .../BuClubApp/MyViewControllers/playerInfoVC.swift  |  19 +++++++------------
+ 2 files changed, 7 insertions(+), 12 deletions(-)
+
+commit da5c464e0a12e4a9bdcf13cb95e8b1bb0e5a5ed5
+Author: Max Gogats <mgogats@gmail.com>
+Date:   Sat Oct 26 19:51:06 2019 -0400
+
+    reasoned out how to implement the roster and stats
+
+ BuClubApp/BuClubApp.xcodeproj/project.pbxproj      |   4 +++
+ .../UserInterfaceState.xcuserstate                 | Bin 59901 -> 62811 bytes
+ .../MyViewControllers/RosterViewController.swift   |   8 ++----
+ .../BuClubApp/MyViewControllers/playerInfoVC.swift |  29 ++++++++++++++++++---
+ BuClubApp/BuClubApp/stats.swift                    |  29 +++++++++++++++++++++
+ 5 files changed, 60 insertions(+), 10 deletions(-)
+
+commit dc14ad57dac15def347953cde30b3fdbe5e30412
+Author: Max Gogats <mgogats@gmail.com>
+Date:   Fri Oct 25 14:02:04 2019 -0400
+
+    implemented about page
+
+ BuClubApp/BuClubApp.xcodeproj/project.pbxproj      |   4 ----
+ .../UserInterfaceState.xcuserstate                 | Bin 49892 -> 59901 bytes
+ .../IMG_0002.imageset/Contents.json                |  21 +++++++++++++++++++++
+ .../Assets.xcassets/IMG_0002.imageset/IMG_0002.JPG | Bin 0 -> 209501 bytes
+ .../BuClubApp/MyViewControllers/AboutVC.swift      |  19 ++++++-------------
+ .../BuClubApp/MyViewControllers/playerInfoVC.swift |   7 +++++++
+ .../BuClubApp/MyViewControllers/scheduleVC.swift   |  19 -------------------
+ 7 files changed, 34 insertions(+), 36 deletions(-)
+
+commit 0f6169d62a36160dcd7d250a548cc27db59a85b2
+Author: Max Gogats <mgogats@gmail.com>
+Date:   Fri Oct 25 12:50:11 2019 -0400
+
+    added viewcontrollers
+
+ .../maxgogats.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist      | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+commit 7fd25e951cbe9736fa39a093912da62063fbc30a
+Author: Max Gogats <mgogats@gmail.com>
+Date:   Fri Oct 25 12:49:56 2019 -0400
+
+    added webview and banner to about tab, webview crashing my application
+
+ BuClubApp/BuClubApp.xcodeproj/project.pbxproj      |   8 +++++
+ .../UserInterfaceState.xcuserstate                 | Bin 36750 -> 49892 bytes
+ .../BuClubApp/MyViewControllers/AboutVC.swift      |  38 +++++++++++++++++++++
+ .../MyViewControllers/RosterViewController.swift   |   6 ++--
+ .../BuClubApp/MyViewControllers/playerInfoVC.swift |   7 ++--
+ .../BuClubApp/MyViewControllers/scheduleVC.swift   |  19 +++++++++++
+ .../StoryBoards/Base.lproj/LaunchScreen.storyboard |   2 +-
+ 7 files changed, 70 insertions(+), 10 deletions(-)
+
+commit 1983641239987567d6315314237f767513c42238
+Author: Max Gogats <mgogats@gmail.com>
+Date:   Thu Oct 24 12:54:27 2019 -0400
+
+    updated storyboard, things to do: implement player information page that displays all player information along with statistics
+
+ .../UserInterfaceState.xcuserstate                  | Bin 37754 -> 36750 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 4c8f3c1c607aa308203d13a85f238e82caa1cbe4
+Author: Max Gogats <mgogats@gmail.com>
+Date:   Thu Oct 24 12:51:32 2019 -0400
+
+    added new viewcontroller, when you click on a table cell it opens a new VC with a description of the player
+
+ BuClubApp/BuClubApp.xcodeproj/project.pbxproj      |   4 +++
+ .../UserInterfaceState.xcuserstate                 | Bin 35080 -> 37754 bytes
+ .../MyViewControllers/RosterViewController.swift   |  39 ++++++++-------------
+ .../BuClubApp/MyViewControllers/playerInfoVC.swift |  27 ++++++++++++++
+ 4 files changed, 45 insertions(+), 25 deletions(-)
+
+commit 23d2a067c06b550cc00e52bb4d5ca76a60c75799
+Author: Max Gogats <mgogats@gmail.com>
+Date:   Wed Oct 23 18:54:37 2019 -0400
+
+    entered entir roster of 30 players, next step want to implement a navigation controller when I click on my name it opens to a page that displays info about me
+
+ .../UserInterfaceState.xcuserstate                 | Bin 26792 -> 35080 bytes
+ .../MyViewControllers/RosterViewController.swift   |  50 +++++++++++++++++++--
+ 2 files changed, 46 insertions(+), 4 deletions(-)
+
+commit 80e26a36db91d8ab7534e85036c9a43dcf7cf7d2
+Author: Max Gogats <mgogats@gmail.com>
+Date:   Tue Oct 22 14:35:18 2019 -0400
+
+    added pods files
+
+ .DS_Store                                          |  Bin 0 -> 6148 bytes
+ BuClubApp/.DS_Store                                |  Bin 0 -> 8196 bytes
+ .../xcdebugger/Breakpoints_v2.xcbkptlist           |    6 +
+ .../BuClubApp.xcworkspace/contents.xcworkspacedata |   10 +
+ .../xcshareddata/IDEWorkspaceChecks.plist          |    8 +
+ .../UserInterfaceState.xcuserstate                 |  Bin 0 -> 26792 bytes
+ BuClubApp/Podfile                                  |   10 +
+ BuClubApp/Podfile.lock                             |   16 +
+ BuClubApp/Pods/.DS_Store                           |  Bin 0 -> 6148 bytes
+ BuClubApp/Pods/Manifest.lock                       |   16 +
+ BuClubApp/Pods/Pods.xcodeproj/project.pbxproj      |  831 ++++++++++
+ .../xcschemes/Pods-BuClubApp.xcscheme              |   58 +
+ .../xcschemes/SwiftSoup.xcscheme                   |   60 +
+ .../xcschemes/xcschememanagement.plist             |   25 +
+ BuClubApp/Pods/SwiftSoup/LICENSE                   |   21 +
+ BuClubApp/Pods/SwiftSoup/README.md                 |  595 +++++++
+ BuClubApp/Pods/SwiftSoup/Sources/ArrayExt.swift    |   21 +
+ BuClubApp/Pods/SwiftSoup/Sources/Attribute.swift   |  148 ++
+ BuClubApp/Pods/SwiftSoup/Sources/Attributes.swift  |  264 ++++
+ .../Pods/SwiftSoup/Sources/BooleanAttribute.swift  |   26 +
+ .../Pods/SwiftSoup/Sources/CharacterExt.swift      |   81 +
+ .../Pods/SwiftSoup/Sources/CharacterReader.swift   |  463 ++++++
+ BuClubApp/Pods/SwiftSoup/Sources/Cleaner.swift     |  150 ++
+ BuClubApp/Pods/SwiftSoup/Sources/Collector.swift   |   59 +
+ .../SwiftSoup/Sources/CombiningEvaluator.swift     |  127 ++
+ BuClubApp/Pods/SwiftSoup/Sources/Comment.swift     |   66 +
+ BuClubApp/Pods/SwiftSoup/Sources/Connection.swift  |   10 +
+ BuClubApp/Pods/SwiftSoup/Sources/DataNode.swift    |   85 +
+ BuClubApp/Pods/SwiftSoup/Sources/DataUtil.swift    |   24 +
+ BuClubApp/Pods/SwiftSoup/Sources/Document.swift    |  562 +++++++
+ .../Pods/SwiftSoup/Sources/DocumentType.swift      |  129 ++
+ BuClubApp/Pods/SwiftSoup/Sources/Element.swift     | 1295 +++++++++++++++
+ BuClubApp/Pods/SwiftSoup/Sources/Elements.swift    |  602 +++++++
+ BuClubApp/Pods/SwiftSoup/Sources/Entities.swift    |  382 +++++
+ BuClubApp/Pods/SwiftSoup/Sources/Evaluator.swift   |  720 +++++++++
+ BuClubApp/Pods/SwiftSoup/Sources/Exception.swift   |   22 +
+ BuClubApp/Pods/SwiftSoup/Sources/FormElement.swift |  125 ++
+ .../Pods/SwiftSoup/Sources/HtmlTreeBuilder.swift   |  771 +++++++++
+ .../SwiftSoup/Sources/HtmlTreeBuilderState.swift   | 1549 ++++++++++++++++++
+ .../SwiftSoup/Sources/HttpStatusException.swift    |   10 +
+ BuClubApp/Pods/SwiftSoup/Sources/Node.swift        |  808 ++++++++++
+ .../Pods/SwiftSoup/Sources/NodeTraversor.swift     |   50 +
+ BuClubApp/Pods/SwiftSoup/Sources/NodeVisitor.swift |   37 +
+ .../Pods/SwiftSoup/Sources/OrderedDictionary.swift |  429 +++++
+ BuClubApp/Pods/SwiftSoup/Sources/OrderedSet.swift  |  453 ++++++
+ BuClubApp/Pods/SwiftSoup/Sources/ParseError.swift  |   42 +
+ .../Pods/SwiftSoup/Sources/ParseErrorList.swift    |   52 +
+ .../Pods/SwiftSoup/Sources/ParseSettings.swift     |   59 +
+ BuClubApp/Pods/SwiftSoup/Sources/Parser.swift      |  201 +++
+ BuClubApp/Pods/SwiftSoup/Sources/Pattern.swift     |   84 +
+ BuClubApp/Pods/SwiftSoup/Sources/QueryParser.swift |  322 ++++
+ BuClubApp/Pods/SwiftSoup/Sources/Selector.swift    |  163 ++
+ .../SwiftSoup/Sources/SerializationException.swift |   10 +
+ .../Pods/SwiftSoup/Sources/SimpleDictionary.swift  |   39 +
+ .../Pods/SwiftSoup/Sources/StreamReader.swift      |   89 ++
+ BuClubApp/Pods/SwiftSoup/Sources/String.swift      |  206 +++
+ .../Pods/SwiftSoup/Sources/StringBuilder.swift     |  165 ++
+ BuClubApp/Pods/SwiftSoup/Sources/StringUtil.swift  |  262 ++++
+ .../SwiftSoup/Sources/StructuralEvaluator.swift    |  176 +++
+ BuClubApp/Pods/SwiftSoup/Sources/SwiftSoup.swift   |  242 +++
+ BuClubApp/Pods/SwiftSoup/Sources/Tag.swift         |  347 +++++
+ BuClubApp/Pods/SwiftSoup/Sources/TextNode.swift    |  199 +++
+ BuClubApp/Pods/SwiftSoup/Sources/Token.swift       |  396 +++++
+ BuClubApp/Pods/SwiftSoup/Sources/TokenQueue.swift  |  428 +++++
+ BuClubApp/Pods/SwiftSoup/Sources/Tokeniser.swift   |  311 ++++
+ .../Pods/SwiftSoup/Sources/TokeniserState.swift    | 1644 ++++++++++++++++++++
+ BuClubApp/Pods/SwiftSoup/Sources/TreeBuilder.swift |   98 ++
+ .../Pods/SwiftSoup/Sources/UnicodeScalar.swift     |   67 +
+ BuClubApp/Pods/SwiftSoup/Sources/Validate.swift    |  133 ++
+ BuClubApp/Pods/SwiftSoup/Sources/Whitelist.swift   |  650 ++++++++
+ .../Pods/SwiftSoup/Sources/XmlDeclaration.swift    |   77 +
+ .../Pods/SwiftSoup/Sources/XmlTreeBuilder.swift    |  146 ++
+ .../Pods-BuClubApp/Pods-BuClubApp-Info.plist       |   26 +
+ .../Pods-BuClubApp-acknowledgements.markdown       |   28 +
+ .../Pods-BuClubApp-acknowledgements.plist          |   60 +
+ .../Pods-BuClubApp/Pods-BuClubApp-dummy.m          |    5 +
+ ...ClubApp-frameworks-Debug-input-files.xcfilelist |    2 +
+ ...lubApp-frameworks-Debug-output-files.xcfilelist |    1 +
+ ...ubApp-frameworks-Release-input-files.xcfilelist |    2 +
+ ...bApp-frameworks-Release-output-files.xcfilelist |    1 +
+ .../Pods-BuClubApp/Pods-BuClubApp-frameworks.sh    |  171 ++
+ .../Pods-BuClubApp/Pods-BuClubApp-umbrella.h       |   16 +
+ .../Pods-BuClubApp/Pods-BuClubApp.debug.xcconfig   |   12 +
+ .../Pods-BuClubApp/Pods-BuClubApp.modulemap        |    6 +
+ .../Pods-BuClubApp/Pods-BuClubApp.release.xcconfig |   12 +
+ .../SwiftSoup/SwiftSoup-Info.plist                 |   26 +
+ .../SwiftSoup/SwiftSoup-dummy.m                    |    5 +
+ .../SwiftSoup/SwiftSoup-prefix.pch                 |   12 +
+ .../SwiftSoup/SwiftSoup-umbrella.h                 |   16 +
+ .../SwiftSoup/SwiftSoup.modulemap                  |    6 +
+ .../SwiftSoup/SwiftSoup.xcconfig                   |   10 +
+ 91 files changed, 18149 insertions(+)
+
+commit 8933180e4d6d94f28bbaca933e176942d58df9fd
+Author: Max Gogats <mgogats@gmail.com>
+Date:   Tue Oct 22 14:31:13 2019 -0400
+
+    updated storyboard
+
+ BuClubApp/BuClubApp.xcodeproj/project.pbxproj      |  19 +--
+ .../StoryBoards/Base.lproj/Main.storyboard         | 174 ---------------------
+ 2 files changed, 5 insertions(+), 188 deletions(-)
+
+commit 7967f5b98f23c30a49b11594d30c6acd3ed4caa1
+Author: Max Gogats <mgogats@gmail.com>
+Date:   Tue Oct 22 14:27:54 2019 -0400
+
+    using SwiftSoup, parsed my created html with roster information and loaded the information into the roster app
+
+ .../MyViewControllers/RosterViewController.swift   | 101 +++++++++++++++------
+ 1 file changed, 75 insertions(+), 26 deletions(-)
+
+commit 5add3c1a6b66e522a711885bb725c064ba0af7c3
+Author: Max Gogats <mgogats@gmail.com>
+Date:   Tue Oct 22 13:15:35 2019 -0400
+
+    added cocoapods, SwiftSoup module, created html with roster, parsed one element of table to put into roster
+
+ BuClubApp/BuClubApp.xcodeproj/project.pbxproj      |  71 +++++++++++++++++++++
+ .../UserInterfaceState.xcuserstate                 | Bin 98889 -> 99322 bytes
+ .../xcschemes/xcschememanagement.plist             |   2 +-
+ .../MyViewControllers/RosterViewController.swift   |  29 ++++++++-
+ 4 files changed, 100 insertions(+), 2 deletions(-)
+
+commit e4b113aabb2c75b47fa372f8bf19c03ab93782f4
+Author: Max Gogats <mgogats@gmail.com>
+Date:   Tue Oct 22 00:51:43 2019 -0400
+
+    not many lines of code but wasdoing a lot of research about JSON parsing and how I could use it to import roster of team, decided that I am going to create an html page with the roster on the page, scrape that data from my website and then put it into the app
+
+ .../UserInterfaceState.xcuserstate                 | Bin 97885 -> 98889 bytes
+ .../MyViewControllers/RosterViewController.swift   |   6 +---
+ BuClubApp/BuClubApp/Player.swift                   |   6 ++--
+ BuClubApp/BuClubApp/RosterCell.swift               |   5 +--
+ .../StoryBoards/Base.lproj/LaunchScreen.storyboard |   8 ++---
+ .../StoryBoards/Base.lproj/Main.storyboard         |  36 ++++++++++++---------
+ 6 files changed, 31 insertions(+), 30 deletions(-)
+
+commit a137fca57e1a9eed68fd334051fc07184c4c04ea
+Author: Max Gogats <mgogats@gmail.com>
+Date:   Thu Oct 17 18:46:49 2019 -0400
+
+    successfully loaded data into tableview, working on loading image into the tableView
+
+ .../UserInterfaceState.xcuserstate                 | Bin 91393 -> 97885 bytes
+ .../MyViewControllers/RosterViewController.swift   |  38 +++++----
+ .../MyViewControllers/ViewController.swift         |  10 +--
+ BuClubApp/BuClubApp/Player.swift                   |   6 +-
+ BuClubApp/BuClubApp/RosterCell.swift               |   5 +-
+ .../StoryBoards/Base.lproj/LaunchScreen.storyboard |  11 ++-
+ .../StoryBoards/Base.lproj/Main.storyboard         |  91 ++++++---------------
+ 7 files changed, 60 insertions(+), 101 deletions(-)
+
+commit a8305ced534970a9bd7a2410216079ede3750151
+Author: Max Gogats <mgogats@gmail.com>
+Date:   Thu Oct 17 18:21:10 2019 -0400
+
+    need help loading data into tableView
+
+ .../UserInterfaceState.xcuserstate                 | Bin 42903 -> 91393 bytes
+ .../MyViewControllers/RosterViewController.swift   |  47 +++++++++------------
+ .../MyViewControllers/ViewController.swift         |   2 +
+ BuClubApp/BuClubApp/Player.swift                   |   4 +-
+ BuClubApp/BuClubApp/RosterCell.swift               |  16 +------
+ .../StoryBoards/Base.lproj/Main.storyboard         |   9 +++-
+ 6 files changed, 33 insertions(+), 45 deletions(-)
+
+commit 0cba2b06da1d1d1e76cbce34747a2dd976bb35da
+Author: Max Gogats <mgogats@gmail.com>
+Date:   Thu Oct 17 12:38:25 2019 -0400
+
+    app completely broken
+
+ BuClubApp/BuClubApp.xcodeproj/project.pbxproj      |  40 +++++++++++---
+ .../UserInterfaceState.xcuserstate                 | Bin 30279 -> 42903 bytes
+ .../Assets.xcassets/tanaka.imageset/Contents.json  |  21 ++++++++
+ .../Assets.xcassets/tanaka.imageset/tanaka.jpeg    | Bin 0 -> 9477 bytes
+ .../BuClubApp/{ => Delegates}/AppDelegate.swift    |   0
+ .../BuClubApp/{ => Delegates}/SceneDelegate.swift  |   0
+ .../MainTabController.swift                        |   4 --
+ .../MyViewControllers/RosterViewController.swift   |  60 +++++++++++++++++++++
+ .../{ => MyViewControllers}/ViewController.swift   |   2 -
+ BuClubApp/BuClubApp/Player.swift                   |   4 +-
+ BuClubApp/BuClubApp/RosterCell.swift               |  16 +++++-
+ .../Base.lproj/LaunchScreen.storyboard             |   0
+ .../{ => StoryBoards}/Base.lproj/Main.storyboard   |  16 ++++--
+ 13 files changed, 143 insertions(+), 20 deletions(-)
+
+commit e15394246a482a0211ce0da71b1cea5a24359795
+Author: Max Gogats <mgogats@gmail.com>
+Date:   Thu Oct 17 11:50:11 2019 -0400
+
+    working on roster using tableviewcells, proving a little confusing trying to code tableviewcell inside of a tabbedviewcontroller
+
+ BuClubApp/BuClubApp.xcodeproj/project.pbxproj      |   8 +++
+ .../UserInterfaceState.xcuserstate                 | Bin 26872 -> 30279 bytes
+ .../yankees1.imageset/Contents.json                |  21 ++++++
+ .../Assets.xcassets/yankees1.imageset/yankees1.png | Bin 0 -> 21272 bytes
+ BuClubApp/BuClubApp/Base.lproj/Main.storyboard     |  73 +++++++++++++++++++--
+ BuClubApp/BuClubApp/MainTabController.swift        |   4 ++
+ BuClubApp/BuClubApp/Player.swift                   |  24 +++++++
+ BuClubApp/BuClubApp/RosterCell.swift               |  27 ++++++++
+ BuClubApp/BuClubApp/ViewController.swift           |   3 +-
+ 9 files changed, 154 insertions(+), 6 deletions(-)
+
+commit 7d7b9b892e0d75ddf9b22d4e9a7107d0731b753c
+Author: Max Gogats <mgogats@gmail.com>
+Date:   Wed Oct 16 12:28:07 2019 -0400
+
+    created home screen, added tabviewcontroller, linked buttons and viewcontrollers to maintabviewcontroller, ready to add data to my tabs
+
+ BuClubApp/BuClubApp.xcodeproj/project.pbxproj      |   4 +
+ .../UserInterfaceState.xcuserstate                 | Bin 12048 -> 26872 bytes
+ .../Assets.xcassets/bulogo5.imageset/Contents.json |  21 ++++
+ .../Assets.xcassets/bulogo5.imageset/bulogo5.jpg   | Bin 0 -> 34768 bytes
+ .../combo_chart.imageset/Contents.json             |  21 ++++
+ .../combo_chart.imageset/combo_chart@2x.png        | Bin 0 -> 481 bytes
+ .../contact_card.imageset/Contents.json            |  21 ++++
+ .../contact_card.imageset/contact_card.png         | Bin 0 -> 299 bytes
+ .../Assets.xcassets/planner.imageset/Contents.json |  21 ++++
+ .../Assets.xcassets/planner.imageset/planner.png   | Bin 0 -> 229 bytes
+ .../user_male.imageset/Contents.json               |  21 ++++
+ .../user_male.imageset/user_male.png               | Bin 0 -> 336 bytes
+ .../BuClubApp/Base.lproj/LaunchScreen.storyboard   |  13 ++-
+ BuClubApp/BuClubApp/Base.lproj/Main.storyboard     | 121 ++++++++++++++++++++-
+ BuClubApp/BuClubApp/MainTabController.swift        |  18 +++
+ BuClubApp/BuClubApp/ViewController.swift           |   7 ++
+ 16 files changed, 257 insertions(+), 11 deletions(-)
+
+commit 0bcf43d9918b48e833ec328d2e5760126ddb1df5
+Author: Max Gogats <mgogats@gmail.com>
+Date:   Wed Oct 16 12:01:01 2019 -0400
+
+    created application, 3rd time restarting project due to complete destruction of other two tries
+
+ BuClubApp/BuClubApp.xcodeproj/project.pbxproj      | 341 +++++++++++++++++++++
+ .../project.xcworkspace/contents.xcworkspacedata   |   7 +
+ .../xcshareddata/IDEWorkspaceChecks.plist          |   8 +
+ .../UserInterfaceState.xcuserstate                 | Bin 0 -> 12048 bytes
+ .../xcschemes/xcschememanagement.plist             |  14 +
+ BuClubApp/BuClubApp/AppDelegate.swift              |  37 +++
+ .../AppIcon.appiconset/Contents.json               |  98 ++++++
+ BuClubApp/BuClubApp/Assets.xcassets/Contents.json  |   6 +
+ .../BuClubApp/Base.lproj/LaunchScreen.storyboard   |  25 ++
+ BuClubApp/BuClubApp/Base.lproj/Main.storyboard     |  24 ++
+ BuClubApp/BuClubApp/Info.plist                     |  64 ++++
+ BuClubApp/BuClubApp/SceneDelegate.swift            |  53 ++++
+ BuClubApp/BuClubApp/ViewController.swift           |  20 ++
+ 13 files changed, 697 insertions(+)
+
+commit 9aecea67e76e01d4c616e1a652f3407c02ed972c
+Author: mgogats <32463812+mgogats@users.noreply.github.com>
+Date:   Wed Oct 16 11:58:20 2019 -0400
+
+    Initial commit
+
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)

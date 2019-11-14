@@ -23,6 +23,7 @@
 		35A4139A2358C69C00B5E5C9 /* RosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A413992358C69C00B5E5C9 /* RosterViewController.swift */; };
 		35E1CDA72365078000A129F1 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E1CDA62365078000A129F1 /* Stats.swift */; };
 		35E32F57236CB83B0085CBCC /* SchedulePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E32F56236CB83B0085CBCC /* SchedulePopUpVC.swift */; };
+		35F14D6F237DE16D00D0DC0B /* MailingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F14D6E237DE16D00D0DC0B /* MailingList.swift */; };
 		CE5378EB8B1497C1B69EE2A3 /* Pods_BuClubApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F4FD8340544D5704F14FEA /* Pods_BuClubApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		35A413992358C69C00B5E5C9 /* RosterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterViewController.swift; sourceTree = "<group>"; };
 		35E1CDA62365078000A129F1 /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
 		35E32F56236CB83B0085CBCC /* SchedulePopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulePopUpVC.swift; sourceTree = "<group>"; };
+		35F14D6E237DE16D00D0DC0B /* MailingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailingList.swift; sourceTree = "<group>"; };
 		A89AEA03F0BE9227F6A973D8 /* Pods-BuClubApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuClubApp.release.xcconfig"; path = "Target Support Files/Pods-BuClubApp/Pods-BuClubApp.release.xcconfig"; sourceTree = "<group>"; };
 		D5F4FD8340544D5704F14FEA /* Pods_BuClubApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuClubApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -106,6 +108,7 @@
 				35200F872367378C00DCF3BF /* ScheduleVC.swift */,
 				35E32F56236CB83B0085CBCC /* SchedulePopUpVC.swift */,
 				355C7DF0237D155B00E9210B /* photosVC.swift */,
+				35F14D6E237DE16D00D0DC0B /* MailingList.swift */,
 			);
 			path = MyViewControllers;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				355C7DF1237D155B00E9210B /* photosVC.swift in Sources */,
 				359FAF57236209A000CD2A8B /* playerInfoVC.swift in Sources */,
 				35200F862367373700DCF3BF /* scheduleCell.swift in Sources */,
+				35F14D6F237DE16D00D0DC0B /* MailingList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,19 +12,33 @@ import WebKit
 import Foundation
 import UIKit
 
+/*
+ Possibly add an email text input for adding to the email list
+ */
+
+
 class AboutVC: UIViewController{
+    @IBOutlet var titleBing: UILabel!
+    @IBOutlet var photosButton: UIButton!
+    @IBOutlet var infoBlurb: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       /* bingTitle.textAlignment = .center
-        bingTitle.font = UIFont(name: "EuphemiaUCAS-Bold", size: CGFloat(20))
-        bingTitle.text = "Binghamton Club Baseball"
-        bingTitle.numberOfLines = 2
+        titleBing.textAlignment = .center
+        titleBing.font = UIFont(name: "EuphemiaUCAS-Bold", size: CGFloat(24))
+        titleBing.text = "Binghamton Club Baseball"
+        titleBing.numberOfLines = 2
         
-        photosButton.titleLabel?.font = UIFont(name: "SanFranciscoDisplay-Black", size: CGFloat(18))
+        infoBlurb.font = UIFont(name: "SanFranciscoDisplay-Black", size: CGFloat(16))
+        infoBlurb.text = "Competitive Baseball Team participating in the Divison 1 NCBA North Atlantic -West Conference. Home field is at Kirkwood Park in Kirkwood, NY.\n\nPractice Schedule\nTuesday 3-4:30PM @ Intramural Turf\nWednesday 5-6:30PM @ Intramural Turf\nFriday 3:30-5:30PM @ Kirkwood"
+        
+        infoBlurb.numberOfLines = 20
+        
+        
+       photosButton.titleLabel?.font = UIFont(name: "SanFranciscoDisplay-Black", size: CGFloat(18))
         photosButton.titleLabel?.textAlignment = .center
         
-        */
     }
 }
 
