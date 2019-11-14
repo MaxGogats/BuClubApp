@@ -30,8 +30,8 @@ class SchedulePopUpVC : UIViewController {
         seriesGames.append("L 4-5\n\nL 2-7\n\nW 4-1")
         
         games.numberOfLines = 10
-        games.text = seriesGames[scheduleRowClicked]
-        games.font = UIFont(name: "HelveticaNeue", size: 15)
+        games.text = seriesGames[scheduleRowClicked-1]
+        games.font = UIFont(name: "HelveticaNeue", size: 30)
     }
 }
 

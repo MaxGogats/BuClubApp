@@ -19,6 +19,7 @@ class AboutVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
         
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
     }

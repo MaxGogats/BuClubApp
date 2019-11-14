@@ -66,6 +66,7 @@ class MainTabController : UITabBarController {
                         }
                         index = index + 1
                     }
+                    
                     print("Done")
                 } catch {
                     // contents could not be loaded
@@ -74,30 +75,6 @@ class MainTabController : UITabBarController {
             } else {
                 // the URL was bad!
                 print("Bad URL!")
-            }
-            
-            var count = 0
-            for _ in fullRoster {
-                let temp = Stats(name: fullRoster[count], abs: "0", hits: "0", average: "0", runs: "0", ribby: "0")
-                rosterStatArray.append(temp)
-                count = count+1
-            }
-            
-            var n = 0
-            for _ in fullRoster {
-                let s1 = Stats(name: names[n], abs: abs[n], hits: hits[n], average: avg[n], runs: runs[n], ribby: rbi[n])
-                statsArray.append(s1)
-                n = n+1
-            }
-            
-            for player in rosterStatArray{
-                for playerStatsName in statsArray {
-                    if(player.playerName.elementsEqual(playerStatsName.playerName)){
-                        print(playerStatsName.playerName)
-                    } else {
-                        print("not equal")
-                    }
-                }
             }
         }
     }
