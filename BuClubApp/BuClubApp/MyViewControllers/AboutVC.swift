@@ -30,10 +30,13 @@ class AboutVC: UIViewController{
         titleBing.text = "Binghamton Club Baseball"
         titleBing.numberOfLines = 2
         
+        
+        infoBlurb.numberOfLines = 20
         infoBlurb.font = UIFont(name: "SanFranciscoDisplay-Black", size: CGFloat(16))
         infoBlurb.text = "Competitive Baseball Team participating in the Divison 1 NCBA North Atlantic -West Conference. Home field is at Kirkwood Park in Kirkwood, NY.\n\nPractice Schedule\nTuesday 3-4:30PM @ Intramural Turf\nWednesday 5-6:30PM @ Intramural Turf\nFriday 3:30-5:30PM @ Kirkwood"
         
-        infoBlurb.numberOfLines = 20
+        infoBlurb.textColor = .white
+        titleBing.textColor = .white 
         
         
        photosButton.titleLabel?.font = UIFont(name: "SanFranciscoDisplay-Black", size: CGFloat(18))
