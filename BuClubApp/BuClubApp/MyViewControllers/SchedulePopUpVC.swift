@@ -20,7 +20,7 @@ class SchedulePopUpVC : UIViewController {
         score.font = UIFont(name: "HelveticaNeue-Bold", size: 25)
         score.numberOfLines = 2
         score.textAlignment = .center
-        score.text = series[scheduleRowClicked]
+        score.text = series19[scheduleRowClicked]
         
         var seriesGames : [String] = []
         
@@ -35,14 +35,14 @@ class SchedulePopUpVC : UIViewController {
         
         
 
-        dates.append("-/--/--")
-        dates.append("9/14/19")
-        dates.append("9/21/19")
-        dates.append("10/05/19 - 10/06/19")
-        dates.append("10/19/19 - 10/20/19")
-        dates.append("11/02/19 - 11/03/19")
-        dates.append("4/04/20 - 4/05/20")
-        dates.append("4/18/20 - 4/19/20")
+        dates19.append("-/--/--")
+        dates19.append("9/14/19")
+        dates19.append("9/21/19")
+        dates19.append("10/05/19 - 10/06/19")
+        dates19.append("10/19/19 - 10/20/19")
+        dates19.append("11/02/19 - 11/03/19")
+        dates19.append("4/04/20 - 4/05/20")
+        dates19.append("4/18/20 - 4/19/20")
         
         
         games.numberOfLines = 10
@@ -50,7 +50,7 @@ class SchedulePopUpVC : UIViewController {
         games.font = UIFont(name: "HelveticaNeue", size: 35)
         
         dateLabel.textAlignment = .center
-        dateLabel.text = dates[scheduleRowClicked]
+        dateLabel.text = dates19[scheduleRowClicked]
         dateLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 25)
     }
 }

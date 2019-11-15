@@ -9,13 +9,14 @@
     import Foundation
     import UIKit
 
-    var series: [String] = []
-    var seriesScores: [String] = []
-    var dates : [String] = []
+    var series19: [String] = []
+    var seriesScores19: [String] = []
+    var dates19 : [String] = []
     var scheduleRowClicked = -1 
     
     class ScheduleVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
-       
+        
+        @IBOutlet var selectYear: UISegmentedControl!
         @IBOutlet weak var tableView: UITableView!
         
        /*
@@ -32,34 +33,36 @@
             tableView.delegate = self
             
             
-            series.append("Series")
-            series.append("BU @ Cortland")
-            series.append("Fordham @ BU")
-            series.append("Brockport @ BU")
-            series.append("Slippery Rock @ BU")
-            series.append("BU @ Pitt")
-            series.append("BU @ Penn St")
-            series.append("BU @ Cornell")
+            series19.append("Series")
+            series19.append("BU @ Cortland")
+            series19.append("Fordham @ BU")
+            series19.append("Brockport @ BU")
+            series19.append("Slippery Rock @ BU")
+            series19.append("BU @ Pitt")
+            series19.append("BU @ Penn St")
+            series19.append("BU @ Cornell")
             
-            seriesScores.append("W-L (Bing)")
-            seriesScores.append("0-2")
-            seriesScores.append("1-1")
-            seriesScores.append("2-1")
-            seriesScores.append("2-1")
-            seriesScores.append("1-2")
-            seriesScores.append("0-0")
-            seriesScores.append("0-0")
+            seriesScores19.append("W-L (Bing)")
+            seriesScores19.append("0-2")
+            seriesScores19.append("1-1")
+            seriesScores19.append("2-1")
+            seriesScores19.append("2-1")
+            seriesScores19.append("1-2")
+            seriesScores19.append("0-0")
+            seriesScores19.append("0-0")
+            
+            selectYear.selectedSegmentIndex = 1
         }
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return series.count
+            return series19.count
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "scheduleCell") as! scheduleCell
-            let game = series[indexPath.row]
-            let score = seriesScores[indexPath.row]
+            let game = series19[indexPath.row]
+            let score = seriesScores19[indexPath.row]
             
             //setting label attributes
             cell.game.text = game
