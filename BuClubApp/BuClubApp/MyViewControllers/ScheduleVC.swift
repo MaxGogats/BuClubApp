@@ -11,6 +11,7 @@
 
     var series: [String] = []
     var seriesScores: [String] = []
+    var dates : [String] = []
     var scheduleRowClicked = -1 
     
     class ScheduleVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
@@ -37,6 +38,8 @@
             series.append("Brockport @ BU")
             series.append("Slippery Rock @ BU")
             series.append("BU @ Pitt")
+            series.append("BU @ Penn St")
+            series.append("BU @ Cornell")
             
             seriesScores.append("W-L (Bing)")
             seriesScores.append("0-2")
@@ -44,8 +47,8 @@
             seriesScores.append("2-1")
             seriesScores.append("2-1")
             seriesScores.append("1-2")
-            
-            
+            seriesScores.append("0-0")
+            seriesScores.append("0-0")
         }
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

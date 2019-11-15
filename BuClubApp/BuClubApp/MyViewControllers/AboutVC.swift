@@ -21,6 +21,7 @@ class AboutVC: UIViewController{
     @IBOutlet var titleBing: UILabel!
     @IBOutlet var photosButton: UIButton!
     @IBOutlet var infoBlurb: UILabel!
+    @IBOutlet var joinMail: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,11 +34,12 @@ class AboutVC: UIViewController{
         
         infoBlurb.numberOfLines = 20
         infoBlurb.font = UIFont(name: "SanFranciscoDisplay-Black", size: CGFloat(16))
-        infoBlurb.text = "Competitive Baseball Team participating in the Divison 1 NCBA North Atlantic -West Conference. Home field is at Kirkwood Park in Kirkwood, NY.\n\nPractice Schedule\nTuesday 3-4:30PM @ Intramural Turf\nWednesday 5-6:30PM @ Intramural Turf\nFriday 3:30-5:30PM @ Kirkwood"
+        infoBlurb.text = "Competitive Baseball Team participating in the Divison 1 NCBA North Atlantic -West Conference. Home field is at Kirkwood Park in Kirkwood, NY.\n\n\n\t\t   Practice Schedule\n\nTuesday 3-4:30PM @ Intramural Turf\n\nWednesday 5-6:30PM @ Intramural Turf\n\nFriday 3:30-5:30PM @ Kirkwood"
         
         infoBlurb.textColor = .white
         titleBing.textColor = .white 
         
+        joinMail.titleLabel?.font = UIFont(name: "SanFranciscoDisplay-Black", size: CGFloat(16))
         
        photosButton.titleLabel?.font = UIFont(name: "SanFranciscoDisplay-Black", size: CGFloat(18))
         photosButton.titleLabel?.textAlignment = .center

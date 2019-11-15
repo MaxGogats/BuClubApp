@@ -12,6 +12,7 @@ import UIKit
 class SchedulePopUpVC : UIViewController {
     @IBOutlet weak var score: UILabel!
     @IBOutlet weak var games: UILabel!
+    @IBOutlet var dateLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +29,29 @@ class SchedulePopUpVC : UIViewController {
         seriesGames.append("W 2-7\n\nW 0-6\n\nL 8-7")
         seriesGames.append("W 0-4\n\nW 2-4\n\nL 4-3")
         seriesGames.append("L 4-5\n\nL 2-7\n\nW 4-1")
+        seriesGames.append("N/A")
+        seriesGames.append("N/A")
+        
+        
+        
+
+        dates.append("-/--/--")
+        dates.append("9/14/19")
+        dates.append("9/21/19")
+        dates.append("10/05/19 - 10/06/19")
+        dates.append("10/19/19 - 10/20/19")
+        dates.append("11/02/19 - 11/03/19")
+        dates.append("4/04/20 - 4/05/20")
+        dates.append("4/18/20 - 4/19/20")
+        
         
         games.numberOfLines = 10
         games.text = seriesGames[scheduleRowClicked-1]
-        games.font = UIFont(name: "HelveticaNeue", size: 30)
+        games.font = UIFont(name: "HelveticaNeue", size: 35)
+        
+        dateLabel.textAlignment = .center
+        dateLabel.text = dates[scheduleRowClicked]
+        dateLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 25)
     }
 }
 

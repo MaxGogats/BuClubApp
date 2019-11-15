@@ -16,12 +16,19 @@ class MailingList : UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        emailAddress.backgroundColor = UIColor.clear
+        //emailAddress.backgroundColor = UIColor.clear
         emailAddress.textAlignment = .center
+        emailAddress.placeholder = "Enter email!"
         
-        
-        
+        submissionButton.addTarget(self, action: #selector(sendEmail), for: .touchUpInside)
     }
     
-    
+    @objc func sendEmail(sender: UIButton!){
+        if(emailAddress.text!.contains("@") == false || emailAddress.text!.contains(".") == false){
+            
+            let alert = UIAlertController(title: "Please Enter A Valid Email Address!", message: "", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+            self.present(alert, animated: true)
+        }
+    }
 }
