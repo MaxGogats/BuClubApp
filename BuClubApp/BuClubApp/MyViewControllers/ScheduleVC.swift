@@ -10,12 +10,13 @@
     
     var series19: [String] = []
     var seriesScores19: [String] = []
-    var dates19 : [String] = []
+    
     var scheduleRowClicked = -1
     
     var series18 : [String] = []
     var seriesScores18 : [String] = []
-    var dates18 : [String] = []
+   
+    var year18 : Bool = true
     
     class ScheduleVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         
@@ -53,16 +54,21 @@
             seriesScores19.append("0-0")
             seriesScores19.append("0-0")
             
-            
             series18.append("Series")
-            series18.append("Series")
-            series18.append("Series")
-            series18.append("Series")
+            series18.append("Oneonta @ BU")
+            series18.append("Clarkson @ BU")
+            series18.append("Oswego @ BU")
+            series18.append("BU @ Cortland")
+            series18.append("Rochester Playoffs")
+            series18.append("Kansas D2 Playoffs")
             
             seriesScores18.append("W-L (Bing)")
-            seriesScores18.append("0-0")
-            seriesScores18.append("0-0")
-            seriesScores18.append("0-0")
+            seriesScores18.append("3-0")
+            seriesScores18.append("3-0")
+            seriesScores18.append("3-0")
+            seriesScores18.append("3-0")
+            seriesScores18.append("3-0")
+            seriesScores18.append("1-2")
             
             selectYear.selectedSegmentIndex = 1
             selectYear.addTarget(self, action: #selector(refreshScene), for: .valueChanged)
@@ -76,8 +82,10 @@
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             
             if(selectYear.selectedSegmentIndex == 1){
+                year18 = false
                 return series19.count
             } else {
+                year18 = true
                 return series18.count
             }
         }
