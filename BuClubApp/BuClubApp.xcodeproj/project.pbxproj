@@ -10,6 +10,7 @@
 		35200F862367373700DCF3BF /* scheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35200F852367373700DCF3BF /* scheduleCell.swift */; };
 		35200F882367378C00DCF3BF /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35200F872367378C00DCF3BF /* ScheduleVC.swift */; };
 		3528173423635BE00082B87A /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3528173323635BE00082B87A /* AboutVC.swift */; };
+		353521BF2382EA3000700659 /* PitchingStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353521BE2382EA3000700659 /* PitchingStats.swift */; };
 		35584D48235F825E00A86890 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35584D47235F825E00A86890 /* Main.storyboard */; };
 		355C7DF1237D155B00E9210B /* photosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355C7DF0237D155B00E9210B /* photosVC.swift */; };
 		359FAF57236209A000CD2A8B /* playerInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359FAF56236209A000CD2A8B /* playerInfoVC.swift */; };
@@ -32,6 +33,7 @@
 		35200F852367373700DCF3BF /* scheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scheduleCell.swift; sourceTree = "<group>"; };
 		35200F872367378C00DCF3BF /* ScheduleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
 		3528173323635BE00082B87A /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
+		353521BE2382EA3000700659 /* PitchingStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchingStats.swift; sourceTree = "<group>"; };
 		35584D47235F825E00A86890 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../../.Trash/Main.storyboard; sourceTree = "<group>"; };
 		355C7DF0237D155B00E9210B /* photosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photosVC.swift; sourceTree = "<group>"; };
 		359FAF56236209A000CD2A8B /* playerInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playerInfoVC.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				35A413952358BE8300B5E5C9 /* RosterCell.swift */,
 				35A413972358C0FF00B5E5C9 /* Player.swift */,
 				35E1CDA62365078000A129F1 /* Stats.swift */,
+				353521BE2382EA3000700659 /* PitchingStats.swift */,
 				35200F852367373700DCF3BF /* scheduleCell.swift */,
 				35A4139C2358C73200B5E5C9 /* MyViewControllers */,
 				35A4139E2358C77000B5E5C9 /* StoryBoards */,
@@ -263,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				353521BF2382EA3000700659 /* PitchingStats.swift in Sources */,
 				35E1CDA72365078000A129F1 /* Stats.swift in Sources */,
 				35A41380235775F900B5E5C9 /* AppDelegate.swift in Sources */,
 				35A413942357787B00B5E5C9 /* MainTabController.swift in Sources */,

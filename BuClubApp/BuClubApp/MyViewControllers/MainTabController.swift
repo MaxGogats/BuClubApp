@@ -11,6 +11,8 @@ import SwiftSoup
 import UIKit
 
 var statsHTML = ""
+
+var rosterStatArray = [Stats]()
 var names = [String]()
 var abs = [String]()
 var runs = [String]()
@@ -18,8 +20,15 @@ var hits = [String]()
 var avg = [String]()
 var rbi = [String]()
 var statsArray = [Stats]()
-var rosterStatArray = [Stats]()
 
+var pitchingStatArray = [PitchingStats]()
+var pNames = [String]()
+var wins = [String]()
+var losses = [String]()
+var innings = [String]()
+var era = [String]()
+var whipString = [String]()
+var strikeouts = [String]()
 
 class MainTabController : UITabBarController {
     override func viewDidLoad() {
@@ -42,13 +51,16 @@ class MainTabController : UITabBarController {
                     let fullTable : Elements = try doc.getElementsByClass("collclubsports-component active")
                     
                     let hittingStats: Element? = fullTable.get(1) //retrieves the hitting table that I need (3 tables, roster, hitting, pitching)
+                    let pitchingStats: Element? = fullTable.get(2)
                     
-                    let data : Elements? = try hittingStats?.getElementsByTag("td") //retrieve all hitting data for each player
+                    
+                    
+                    let pitchingData : Elements? = try pitchingStats?.getElementsByTag("td")
+                    let hittingData : Elements? = try hittingStats?.getElementsByTag("td") //retrieve all hitting data for each player
                     
                     //puts stats into right arrays
                     var index = 0
-                    for td in data!{
-                        
+                    for td in hittingData!{
                         if(index == 0){
                             try names.append(td.text())
                         } else if (index == 1){
@@ -67,6 +79,28 @@ class MainTabController : UITabBarController {
                         index = index + 1
                     }
                     
+                    var pIndex = 0
+                    for td in pitchingData! {
+                        if(pIndex == 0){
+                            pNames.append(try td.text())
+                        } else if(pIndex == 1){
+                            wins.append(try td.text())
+                        } else if(pIndex == 2){
+                            losses.append(try td.text())
+                        } else if(pIndex == 3){
+                            era.append(try td.text())
+                        } else if(pIndex == 9){
+                            innings.append(try td.text())
+                        } else if(pIndex == 15){
+                            strikeouts.append(try td.text())
+                        } else if(pIndex == 16){
+                            whipString.append(try td.text())
+                        } else if (pIndex == 27){
+                            pIndex = -1
+                        }
+                        pIndex = pIndex + 1
+                    }
+    
                     print("Done")
                 } catch {
                     // contents could not be loaded
