@@ -50,11 +50,8 @@ class SchedulePopUpVC : UIViewController {
         seriesGames18.append("W 6-0\n\nW 8-2\n\nW 10-0\n\n")
         seriesGames18.append("W 6-0\n\nW 8-2\n\nW 10-0\n\n")
         seriesGames18.append("Rochester Win")
-        seriesGames18.append("Rochester Win")
-        seriesGames18.append("Rochester Win")
         seriesGames18.append("Kansas")
-        seriesGames18.append("Kansas")
-        seriesGames18.append("Kansas")
+        
         
         dates18.append("Location")
         dates18.append("Oneonta")
