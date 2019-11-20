@@ -35,6 +35,16 @@ class MainTabController : UITabBarController {
         super.viewDidLoad()
         self.selectedIndex = 0
         
+        
+        /*uploading batting average to server structure*/
+        struct avgList: Codable {
+            let playerName : String
+            let rbiNum : Int
+            let g : String
+        }
+        
+        
+        
         //This code retrieves HTML on a background thread
         let dispatchQueue = DispatchQueue(label: "QueueIdentification", qos: .background)
         dispatchQueue.async{
@@ -101,6 +111,40 @@ class MainTabController : UITabBarController {
                         pIndex = pIndex + 1
                     }
     
+                    let avgListForUpload = avgList(playerName: "Max Gogats", rbiNum: 5, g: "Baseball App")
+                   
+                    guard let uploadData = try? JSONEncoder().encode(avgListForUpload) else {
+                        return
+                    }
+                    
+                    let url2 = URL(string: "http://cs.binghamton.edu/~pmadden/courses/441score/db.php")!
+                    
+                    var request = URLRequest(url: url2)
+                    request.httpMethod = "POST"
+                    request.setValue("application/json", forHTTPHeaderField: "Content-type")
+                    
+                    let task = URLSession.shared.uploadTask(with: request, from: uploadData){
+                        data, response, error in
+                        if let error = error{
+                            print("error: \(error)")
+                            return
+                        }
+                        guard let response = response as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
+                            print("server error")
+                            return
+                        }
+                        
+                        if let mimeType = response.mimeType,
+                                mimeType == "application/json",
+                                let data = data,
+                                let dataString = String(data: data, encoding: .utf8) {
+                                print ("got data: \(dataString)")
+                            }
+                        }
+                        task.resume()
+                    
+                    print(task.state.self)
+                    
                     print("Done")
                 } catch {
                     // contents could not be loaded
