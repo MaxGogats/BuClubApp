@@ -20,6 +20,8 @@ class RosterViewController : UIViewController, UITableViewDataSource, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         players = createPlayerArray()
         
     }
@@ -144,6 +146,10 @@ class RosterViewController : UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         rowClicked = indexPath.row
+    }
+    
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        
     }
     
 }

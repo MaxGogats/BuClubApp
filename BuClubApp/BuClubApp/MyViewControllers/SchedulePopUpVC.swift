@@ -52,7 +52,6 @@ class SchedulePopUpVC : UIViewController {
         seriesGames18.append("Rochester Win")
         seriesGames18.append("Kansas")
         
-        
         dates18.append("Location")
         dates18.append("Oneonta")
         dates18.append("Clarkson")
@@ -61,17 +60,18 @@ class SchedulePopUpVC : UIViewController {
         dates18.append("Rochester")
         dates18.append("Kansas")
         
-        
         games.numberOfLines = 10
         games.font = UIFont(name: "HelveticaNeue", size: 35)
         dateLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 25)
         dateLabel.textAlignment = .center
         
         if(year18 == false){
+            self.title = series19[scheduleRowClicked]
             games.text = seriesGames19[scheduleRowClicked-1]
             dateLabel.text = dates19[scheduleRowClicked]
             
         } else if (year18 == true){
+            self.title = series18[scheduleRowClicked]
             games.text = seriesGames18[scheduleRowClicked-1]
             dateLabel.text = dates18[scheduleRowClicked]
         }

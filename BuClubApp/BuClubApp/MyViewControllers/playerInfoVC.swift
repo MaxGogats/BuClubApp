@@ -14,7 +14,7 @@ class playerInfoVC: UIViewController {
     
    
     /* Hitting Labels*/
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet var playerName: UINavigationItem!
     @IBOutlet weak var rbiNum: UILabel!
     @IBOutlet weak var avgNum: UILabel!
     @IBOutlet weak var runsNum: UILabel!
@@ -37,10 +37,7 @@ class playerInfoVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = fullRoster[rowClicked-1]
-        nameLabel.font = UIFont(name: "Copperplate-Bold", size: CGFloat(40))
-        nameLabel.numberOfLines = 2 
-        nameLabel.textAlignment = .center
+        self.title = fullRoster[rowClicked-1]
         
         hittingLabel.font = UIFont(name: "Copperplate-Bold", size: CGFloat(30))
         pitchingLabel.font = UIFont(name: "Copperplate-Bold", size: CGFloat(30))

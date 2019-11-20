@@ -32,7 +32,7 @@
         
         override func viewDidLoad() {
             super.viewDidLoad()
-            
+        
             tableView.dataSource = self
             tableView.delegate = self
             
@@ -102,8 +102,8 @@
                 cell.game.text = game
                 cell.score.text = score
                 
-                cell.game.font = UIFont(name: "EuphemiaUCAS-Bold", size: CGFloat(18))
-                cell.score.font = UIFont(name: "EuphemiaUCAS-Bold", size: CGFloat(18))
+                cell.game.font = UIFont(name: "EuphemiaUCAS-Bold", size: CGFloat(16))
+                cell.score.font = UIFont(name: "EuphemiaUCAS-Bold", size: CGFloat(16))
                 
                 return cell
             
@@ -116,15 +116,15 @@
                 cell.game.text = game
                 cell.score.text = score
                 
-                cell.game.font = UIFont(name: "EuphemiaUCAS-Bold", size: CGFloat(18))
-                cell.score.font = UIFont(name: "EuphemiaUCAS-Bold", size: CGFloat(18))
+                cell.game.font = UIFont(name: "EuphemiaUCAS-Bold", size: CGFloat(16))
+                cell.score.font = UIFont(name: "EuphemiaUCAS-Bold", size: CGFloat(16))
                 
                 return cell
             }
         }
         
         func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            return CGFloat(100)
+            return CGFloat(90)
         }
         
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
