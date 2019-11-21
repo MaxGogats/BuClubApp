@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35048C2A23872E20002D9736 /* Gmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35048C2923872E20002D9736 /* Gmail.swift */; };
 		35200F862367373700DCF3BF /* scheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35200F852367373700DCF3BF /* scheduleCell.swift */; };
 		35200F882367378C00DCF3BF /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35200F872367378C00DCF3BF /* ScheduleVC.swift */; };
 		3528173423635BE00082B87A /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3528173323635BE00082B87A /* AboutVC.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		2EEBE087C117863D7C28BF0B /* Pods-BuClubApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuClubApp.debug.xcconfig"; path = "Target Support Files/Pods-BuClubApp/Pods-BuClubApp.debug.xcconfig"; sourceTree = "<group>"; };
+		35048C2923872E20002D9736 /* Gmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gmail.swift; sourceTree = "<group>"; };
 		35200F852367373700DCF3BF /* scheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scheduleCell.swift; sourceTree = "<group>"; };
 		35200F872367378C00DCF3BF /* ScheduleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
 		3528173323635BE00082B87A /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				35E32F56236CB83B0085CBCC /* SchedulePopUpVC.swift */,
 				355C7DF0237D155B00E9210B /* photosVC.swift */,
 				35F14D6E237DE16D00D0DC0B /* MailingList.swift */,
+				35048C2923872E20002D9736 /* Gmail.swift */,
 			);
 			path = MyViewControllers;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 				35A41379235775F900B5E5C9 /* Frameworks */,
 				35A4137A235775F900B5E5C9 /* Resources */,
 				B78A747842654B624EBF6E12 /* [CP] Embed Pods Frameworks */,
+				1FB6039FC84394885D2DD421 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,6 +224,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1FB6039FC84394885D2DD421 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BuClubApp/Pods-BuClubApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BuClubApp/Pods-BuClubApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BuClubApp/Pods-BuClubApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		834A84D60F246982192D21AA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -266,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35048C2A23872E20002D9736 /* Gmail.swift in Sources */,
 				353521BF2382EA3000700659 /* PitchingStats.swift in Sources */,
 				35E1CDA72365078000A129F1 /* Stats.swift in Sources */,
 				35A41380235775F900B5E5C9 /* AppDelegate.swift in Sources */,

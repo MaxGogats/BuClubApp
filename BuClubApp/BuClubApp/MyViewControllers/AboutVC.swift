@@ -34,7 +34,7 @@ class AboutVC: UIViewController{
         
         infoBlurb.numberOfLines = 20
         infoBlurb.font = UIFont(name: "SanFranciscoDisplay-Black", size: CGFloat(16))
-        infoBlurb.text = "Competitive Baseball Team participating in the Divison 1 NCBA North Atlantic -West Conference. Home field is at Kirkwood Park in Kirkwood, NY.\n\n\n\t\t   Practice Schedule\n\nTuesday 3-4:30PM @ Intramural Turf\n\nWednesday 5-6:30PM @ Intramural Turf\n\nFriday 3:30-5:30PM @ Kirkwood"
+        infoBlurb.text = "Competitive Baseball Team participating in the Divison 1 NCBA North Atlantic -West Conference. Home field is at Kirkwood Park in Kirkwood, NY.\n\n\n\t\t      Practice Schedule\n\nTuesday 3-4:30PM @ Intramural Turf\n\nWednesday 5-6:30PM @ Intramural Turf\n\nFriday 3:30-5:30PM @ Kirkwood"
         
         infoBlurb.textColor = .white
         titleBing.textColor = .white 

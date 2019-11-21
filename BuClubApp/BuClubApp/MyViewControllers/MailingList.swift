@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MessageUI
 
 class MailingList : UIViewController{
     @IBOutlet var emailAddress: UITextField!
@@ -23,6 +24,7 @@ class MailingList : UIViewController{
         submissionButton.addTarget(self, action: #selector(sendEmail), for: .touchUpInside)
     }
     
+    
     @objc func sendEmail(sender: UIButton!){
         if(emailAddress.text!.contains("@") == false || emailAddress.text!.contains(".") == false){
             
@@ -31,4 +33,10 @@ class MailingList : UIViewController{
             self.present(alert, animated: true)
         }
     }
+    
+
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
+    
 }
