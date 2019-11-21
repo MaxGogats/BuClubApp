@@ -9,10 +9,19 @@
 import Foundation
 import UIKit
 
-class photosVC : UIViewController{
+class photosVC : UIViewController, UIScrollViewDelegate {
+    @IBOutlet var imgv: UIImageView!
+    @IBOutlet var scroll: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        scroll.delegate = self
     }
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return imgv
+    }
+    
 }
 
 
