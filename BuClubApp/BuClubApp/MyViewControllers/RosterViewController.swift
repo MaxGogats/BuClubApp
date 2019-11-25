@@ -139,6 +139,11 @@ class RosterViewController : UIViewController, UITableViewDataSource, UITableVie
         let player = players[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerCell") as! RosterCell
         
+        if(player.playerName.elementsEqual("Name")){
+            cell.isUserInteractionEnabled = false
+            cell.selectionStyle = .none
+        }
+        
         cell.setPlayer(player: player)
         
         return cell

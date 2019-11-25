@@ -15,7 +15,7 @@
     
     var series18 : [String] = []
     var seriesScores18 : [String] = []
-   
+    
     var year18 : Bool = true
     
     class ScheduleVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
@@ -32,7 +32,7 @@
         
         override func viewDidLoad() {
             super.viewDidLoad()
-        
+            
             tableView.dataSource = self
             tableView.delegate = self
             
@@ -98,6 +98,10 @@
                 let game = series19[indexPath.row]
                 let score = seriesScores19[indexPath.row]
                 
+                if(game.elementsEqual("Series")){
+                    cell.selectionStyle = .none
+                    cell.isUserInteractionEnabled = false
+                }
                 //setting label attributes
                 cell.game.text = game
                 cell.score.text = score
@@ -106,11 +110,16 @@
                 cell.score.font = UIFont(name: "EuphemiaUCAS-Bold", size: CGFloat(16))
                 
                 return cell
-            
+                
             } else {
                 
                 let game = series18[indexPath.row]
                 let score = seriesScores18[indexPath.row]
+                
+                if(game.elementsEqual("Series")){
+                    cell.selectionStyle = .none
+                    cell.isUserInteractionEnabled = false
+                }
                 
                 //setting label attributes
                 cell.game.text = game
@@ -129,5 +138,8 @@
         
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             scheduleRowClicked = indexPath.row
+            
         }
+        
+        
     }

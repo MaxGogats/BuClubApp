@@ -31,6 +31,10 @@ class MailingList : UIViewController{
             let alert = UIAlertController(title: "Please Enter A Valid Email Address!", message: "", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
             self.present(alert, animated: true)
+        } else {
+            let alert = UIAlertController(title: "You've been added to our mailing list!", message: "", preferredStyle:  .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+            self.present(alert, animated: true)
         }
     }
     
