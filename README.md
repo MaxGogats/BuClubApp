@@ -1,11 +1,13 @@
-Tabbed-view application that shows the roster, schedule, stats, and information about the BU Club baseball team. 
+BINGHAMTON BASEBALL APPLICATION 
 
-Gathered roster information and stats from https://www.clubbaseball.org/league/team/?team=36c1ba31-b586-4be7-a37b-343c6d9363ee&season=46d3ea9a-a080-4273-befb-58b30c2adb01#team-player
+Tabbed-view application that shows the roster, stats, schedule, and information about the BU Club baseball team. 
 
-Used SwiftSoup to parse HTML table from the above website to display the roster and stats into individual tableviewcells. The tableviewcells open a navigation controller and new viewcontroller that displays stats of the clicked player. I used a background thread for retrieving the data from the website in real time. Was difficult retrieving the data I wanted but I learned a lot of HTML and a lot about scraping data from the internet in general. 
+Information Tab: Consists of Team Information including the practice schedule, conference standings, team pictures, and contact info. 
 
-Problems that I face now are that the application loads the cells before the html is done parsing causing funky behavior. In the future I want the application to remember the stats that it has currently and then check the website to see if any of the data changed therefore the data is cached. Also want to retrieve information from the games online instead of entering manually. 
+Mailing List Button: User can enter a valid email address and be added to mailing list of the team. At this moment, the entered emails are saved to a database created on mysql.cs.binghamton.edu servers. You can see the table at http://cs.binghamton.edu/~mgogats1/getEmails.php
 
-Project 5: Added pitching stats into roster view. Added an early version of photos page which has zoom functionality. Fixed the bugs which were causing to crash when clicking on certain cells. Added a mailing page that adds your email to the teams mailing list (unfinished). Worked with Gmail API for about a day to try and become more familiar with using RESTful API. For the future I want to make a database that saves all the roster information so that the application can load faster! 
+Roster: Displays the number, name, and position of the roster of the team. When user clicks on a certain player, a navigation controller opens a view controller that displays hitting and pitching stats of clicked player with information found on https://www.clubbaseball.org/league/team/?team=36c1ba31-b586-4be7-a37b-343c6d9363ee&season=46d3ea9a-a080-4273-befb-58b30c2adb01#team-stats. Used CocoaPods and SwiftSoup to parse HTML into usable data. 
 
-Instead of screenshots: https://www.youtube.com/watch?v=3okAyoXKQ4Q&feature=youtu.be
+Schedule: Hard-coded schedule tableview showing series from past 2 years changeable with a toggle button. 
+
+
