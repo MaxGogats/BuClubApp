@@ -22,6 +22,7 @@ class MailingList : UIViewController{
         emailAddress.placeholder = "Enter email!"
         
         submissionButton.addTarget(self, action: #selector(sendEmail), for: .touchUpInside)
+        
     }
     
     
@@ -32,6 +33,18 @@ class MailingList : UIViewController{
             alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
             self.present(alert, animated: true)
         } else {
+            
+            let strURL = "https://cs.binghamton.edu/~mgogats1/postEmail.php?email=" + emailAddress.text!
+            let url = URL(string: strURL)
+            
+            let task = URLSession.shared.dataTask(with: url!) {(data, response, error) in
+                guard let data = data else { return }
+                print(String(data: data, encoding: .utf8)!)
+            }
+
+            task.resume()
+            
+            
             let alert = UIAlertController(title: "You've been added to our mailing list!", message: "", preferredStyle:  .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
             self.present(alert, animated: true)

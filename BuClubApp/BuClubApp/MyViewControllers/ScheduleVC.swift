@@ -29,7 +29,7 @@
          3. Add winning / losing pitchers for the games
          4. add little scroll bar that you can see the schedule from last year (ambitious)
          */
-        
+
         override func viewDidLoad() {
             super.viewDidLoad()
             
@@ -45,14 +45,14 @@
             series19.append("BU @ Penn St")
             series19.append("BU @ Cornell")
             
-            seriesScores19.append("W-L (Bing)")
-            seriesScores19.append("0-2")
-            seriesScores19.append("1-1")
-            seriesScores19.append("2-1")
-            seriesScores19.append("2-1")
-            seriesScores19.append("1-2")
-            seriesScores19.append("0-0")
-            seriesScores19.append("0-0")
+            seriesScores19.append("\tW-L")
+            seriesScores19.append("\t0-2")
+            seriesScores19.append("\t1-1")
+            seriesScores19.append("\t2-1")
+            seriesScores19.append("\t2-1")
+            seriesScores19.append("\t1-2")
+            seriesScores19.append("\t0-0")
+            seriesScores19.append("\t0-0")
             
             series18.append("Series")
             series18.append("Oneonta @ BU")
@@ -72,7 +72,6 @@
             
             selectYear.selectedSegmentIndex = 1
             selectYear.addTarget(self, action: #selector(refreshScene), for: .valueChanged)
-            
         }
         
         @objc func refreshScene(sender: UISegmentedControl){
@@ -91,7 +90,6 @@
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            
             let cell = tableView.dequeueReusableCell(withIdentifier: "scheduleCell") as! scheduleCell
             
             if(selectYear.selectedSegmentIndex == 1){
@@ -106,8 +104,7 @@
                 cell.game.text = game
                 cell.score.text = score
                 
-                cell.game.font = UIFont(name: "EuphemiaUCAS-Bold", size: CGFloat(16))
-                cell.score.font = UIFont(name: "EuphemiaUCAS-Bold", size: CGFloat(16))
+            
                 
                 return cell
                 
@@ -138,8 +135,5 @@
         
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             scheduleRowClicked = indexPath.row
-            
         }
-        
-        
     }

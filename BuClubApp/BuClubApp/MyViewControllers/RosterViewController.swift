@@ -75,7 +75,6 @@ class RosterViewController : UIViewController, UITableViewDataSource, UITableVie
                 "</tr><tr><td>31</td><td>Weinberg, Jesse</td><td>C</td>" +
                 "</tr><tr><td>9</td><td>Xhunga, Brandon</td><td>2B,SS,3B</td></tr></tbody>        </table> </html>"
             
-        
             let doc: Document = try SwiftSoup.parse(html)
             let td : [Element] = try doc.getElementsByTag("td").array()
         

@@ -36,14 +36,7 @@ class MainTabController : UITabBarController {
         self.selectedIndex = 0
         
         
-        /*uploading batting average to server structure*/
-        struct avgList: Codable {
-            let playerName : String
-            let rbiNum : Int
-            let g : String
-        }
-        
-        
+      
         
         //This code retrieves HTML on a background thread
         let dispatchQueue = DispatchQueue(label: "QueueIdentification", qos: .background)

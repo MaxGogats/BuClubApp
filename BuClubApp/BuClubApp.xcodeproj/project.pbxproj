@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		35048C2A23872E20002D9736 /* Gmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35048C2923872E20002D9736 /* Gmail.swift */; };
 		35200F862367373700DCF3BF /* scheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35200F852367373700DCF3BF /* scheduleCell.swift */; };
 		35200F882367378C00DCF3BF /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35200F872367378C00DCF3BF /* ScheduleVC.swift */; };
 		3528173423635BE00082B87A /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3528173323635BE00082B87A /* AboutVC.swift */; };
@@ -25,13 +24,14 @@
 		35A4139A2358C69C00B5E5C9 /* RosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A413992358C69C00B5E5C9 /* RosterViewController.swift */; };
 		35E1CDA72365078000A129F1 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E1CDA62365078000A129F1 /* Stats.swift */; };
 		35E32F57236CB83B0085CBCC /* SchedulePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E32F56236CB83B0085CBCC /* SchedulePopUpVC.swift */; };
+		35E5BAAC239F19D70079A362 /* StandingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E5BAAB239F19D70079A362 /* StandingsVC.swift */; };
+		35E5BAAE239F1C490079A362 /* practiceSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E5BAAD239F1C490079A362 /* practiceSchedule.swift */; };
 		35F14D6F237DE16D00D0DC0B /* MailingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F14D6E237DE16D00D0DC0B /* MailingList.swift */; };
 		CE5378EB8B1497C1B69EE2A3 /* Pods_BuClubApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F4FD8340544D5704F14FEA /* Pods_BuClubApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2EEBE087C117863D7C28BF0B /* Pods-BuClubApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuClubApp.debug.xcconfig"; path = "Target Support Files/Pods-BuClubApp/Pods-BuClubApp.debug.xcconfig"; sourceTree = "<group>"; };
-		35048C2923872E20002D9736 /* Gmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gmail.swift; sourceTree = "<group>"; };
 		35200F852367373700DCF3BF /* scheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scheduleCell.swift; sourceTree = "<group>"; };
 		35200F872367378C00DCF3BF /* ScheduleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
 		3528173323635BE00082B87A /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
@@ -51,6 +51,8 @@
 		35A413992358C69C00B5E5C9 /* RosterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterViewController.swift; sourceTree = "<group>"; };
 		35E1CDA62365078000A129F1 /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
 		35E32F56236CB83B0085CBCC /* SchedulePopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulePopUpVC.swift; sourceTree = "<group>"; };
+		35E5BAAB239F19D70079A362 /* StandingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsVC.swift; sourceTree = "<group>"; };
+		35E5BAAD239F1C490079A362 /* practiceSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = practiceSchedule.swift; sourceTree = "<group>"; };
 		35F14D6E237DE16D00D0DC0B /* MailingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailingList.swift; sourceTree = "<group>"; };
 		A89AEA03F0BE9227F6A973D8 /* Pods-BuClubApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuClubApp.release.xcconfig"; path = "Target Support Files/Pods-BuClubApp/Pods-BuClubApp.release.xcconfig"; sourceTree = "<group>"; };
 		D5F4FD8340544D5704F14FEA /* Pods_BuClubApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuClubApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,7 +116,8 @@
 				35E32F56236CB83B0085CBCC /* SchedulePopUpVC.swift */,
 				355C7DF0237D155B00E9210B /* photosVC.swift */,
 				35F14D6E237DE16D00D0DC0B /* MailingList.swift */,
-				35048C2923872E20002D9736 /* Gmail.swift */,
+				35E5BAAB239F19D70079A362 /* StandingsVC.swift */,
+				35E5BAAD239F1C490079A362 /* practiceSchedule.swift */,
 			);
 			path = MyViewControllers;
 			sourceTree = "<group>";
@@ -287,12 +290,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35048C2A23872E20002D9736 /* Gmail.swift in Sources */,
 				353521BF2382EA3000700659 /* PitchingStats.swift in Sources */,
 				35E1CDA72365078000A129F1 /* Stats.swift in Sources */,
 				35A41380235775F900B5E5C9 /* AppDelegate.swift in Sources */,
+				35E5BAAC239F19D70079A362 /* StandingsVC.swift in Sources */,
 				35A413942357787B00B5E5C9 /* MainTabController.swift in Sources */,
 				35A413962358BE8300B5E5C9 /* RosterCell.swift in Sources */,
+				35E5BAAE239F1C490079A362 /* practiceSchedule.swift in Sources */,
 				35A413982358C0FF00B5E5C9 /* Player.swift in Sources */,
 				3528173423635BE00082B87A /* AboutVC.swift in Sources */,
 				35A41382235775F900B5E5C9 /* SceneDelegate.swift in Sources */,
