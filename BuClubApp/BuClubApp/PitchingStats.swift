@@ -16,16 +16,14 @@ class PitchingStats {
     var era : String
     var numSO : String
     var numInnings : String
-    var whip : String
     
     
-    init(player : String, win : String, loss1 : String, era1 : String, numSO1 : String, numInn : String, whip1 : String){
+    init(player : String, win : String, loss1 : String, era1 : String, numSO1 : String, numInn : String){
         name = player
         wins = win
         loss = loss1
         era = era1
         numSO = numSO1
         numInnings = numInn
-        whip = whip1
     }
 }

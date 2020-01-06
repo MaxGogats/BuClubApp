@@ -12,7 +12,6 @@
 		3528173423635BE00082B87A /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3528173323635BE00082B87A /* AboutVC.swift */; };
 		353521BF2382EA3000700659 /* PitchingStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353521BE2382EA3000700659 /* PitchingStats.swift */; };
 		35584D48235F825E00A86890 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35584D47235F825E00A86890 /* Main.storyboard */; };
-		355C7DF1237D155B00E9210B /* photosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355C7DF0237D155B00E9210B /* photosVC.swift */; };
 		359FAF57236209A000CD2A8B /* playerInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359FAF56236209A000CD2A8B /* playerInfoVC.swift */; };
 		35A41380235775F900B5E5C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4137F235775F900B5E5C9 /* AppDelegate.swift */; };
 		35A41382235775F900B5E5C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A41381235775F900B5E5C9 /* SceneDelegate.swift */; };
@@ -37,7 +36,6 @@
 		3528173323635BE00082B87A /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		353521BE2382EA3000700659 /* PitchingStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchingStats.swift; sourceTree = "<group>"; };
 		35584D47235F825E00A86890 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../../.Trash/Main.storyboard; sourceTree = "<group>"; };
-		355C7DF0237D155B00E9210B /* photosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photosVC.swift; sourceTree = "<group>"; };
 		359FAF56236209A000CD2A8B /* playerInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playerInfoVC.swift; sourceTree = "<group>"; };
 		35A4137C235775F900B5E5C9 /* BuClubApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuClubApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A4137F235775F900B5E5C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,14 +107,13 @@
 			isa = PBXGroup;
 			children = (
 				35A413992358C69C00B5E5C9 /* RosterViewController.swift */,
+				35E5BAAB239F19D70079A362 /* StandingsVC.swift */,
 				35A413932357787B00B5E5C9 /* MainTabController.swift */,
 				359FAF56236209A000CD2A8B /* playerInfoVC.swift */,
 				3528173323635BE00082B87A /* AboutVC.swift */,
 				35200F872367378C00DCF3BF /* ScheduleVC.swift */,
 				35E32F56236CB83B0085CBCC /* SchedulePopUpVC.swift */,
-				355C7DF0237D155B00E9210B /* photosVC.swift */,
 				35F14D6E237DE16D00D0DC0B /* MailingList.swift */,
-				35E5BAAB239F19D70079A362 /* StandingsVC.swift */,
 				35E5BAAD239F1C490079A362 /* practiceSchedule.swift */,
 			);
 			path = MyViewControllers;
@@ -303,7 +300,6 @@
 				35E32F57236CB83B0085CBCC /* SchedulePopUpVC.swift in Sources */,
 				35A4139A2358C69C00B5E5C9 /* RosterViewController.swift in Sources */,
 				35200F882367378C00DCF3BF /* ScheduleVC.swift in Sources */,
-				355C7DF1237D155B00E9210B /* photosVC.swift in Sources */,
 				359FAF57236209A000CD2A8B /* playerInfoVC.swift in Sources */,
 				35200F862367373700DCF3BF /* scheduleCell.swift in Sources */,
 				35F14D6F237DE16D00D0DC0B /* MailingList.swift in Sources */,

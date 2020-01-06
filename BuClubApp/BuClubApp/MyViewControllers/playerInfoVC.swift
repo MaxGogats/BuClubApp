@@ -20,8 +20,6 @@ class playerInfoVC: UIViewController {
     @IBOutlet weak var runsNum: UILabel!
     @IBOutlet weak var hitsNum: UILabel!
     @IBOutlet weak var abNum: UILabel!
-    @IBOutlet var pitchingLabel: UILabel!
-    @IBOutlet var hittingLabel: UILabel!
     
     /*Pitching Labels*/
     
@@ -39,10 +37,6 @@ class playerInfoVC: UIViewController {
         super.viewDidLoad()
         self.title = fullRoster[rowClicked-1]
         
-        hittingLabel.font = UIFont(name: "Copperplate-Bold", size: CGFloat(30))
-        pitchingLabel.font = UIFont(name: "Copperplate-Bold", size: CGFloat(30))
-        pitchingLabel.text = "PITCHING"
-        
         loadPlayerData()
         
         abNum.text = rosterStatArray[rowClicked-1].ab
@@ -56,7 +50,6 @@ class playerInfoVC: UIViewController {
         numGames.text = rosterPitchingArray[rowClicked-1].numInnings
         eraNum.text = rosterPitchingArray[rowClicked-1].era
         numSO.text = rosterPitchingArray[rowClicked-1].numSO
-        whip.text = rosterPitchingArray[rowClicked-1].whip
     }
     
     func loadPlayerData(){
@@ -64,7 +57,7 @@ class playerInfoVC: UIViewController {
         var count = 0
         for _ in fullRoster {
             let temp = Stats(name: fullRoster[count], abs: "0", hits: "0", average: "0", runs: "0", ribby: "0")
-            let pTemp = PitchingStats(player: fullRoster[count], win: "0", loss1: "0", era1: "0", numSO1: "0", numInn: "0", whip1: "0")
+            let pTemp = PitchingStats(player: fullRoster[count], win: "0", loss1: "0", era1: "0", numSO1: "0", numInn: "0")
             rosterStatArray.append(temp)
             rosterPitchingArray.append(pTemp)
             count = count+1
@@ -79,7 +72,7 @@ class playerInfoVC: UIViewController {
         
         var j = 0
         for _ in pNames {
-            let p1 = PitchingStats(player: pNames[j], win: wins[j], loss1: losses[j], era1: era[j], numSO1: strikeouts[j], numInn: innings[j], whip1: whipString[j])
+            let p1 = PitchingStats(player: pNames[j], win: wins[j], loss1: losses[j], era1: era[j], numSO1: strikeouts[j], numInn: innings[j])
             
             pStatsArray.append(p1)
             j = j+1
@@ -93,7 +86,6 @@ class playerInfoVC: UIViewController {
                     defaultPitcher.era = realStats.era
                     defaultPitcher.numInnings = realStats.numInnings
                     defaultPitcher.numSO = realStats.numSO
-                    defaultPitcher.whip = realStats.whip
                 }
             }
         }

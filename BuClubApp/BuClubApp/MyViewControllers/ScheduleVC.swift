@@ -122,8 +122,8 @@
                 cell.game.text = game
                 cell.score.text = score
                 
-                cell.game.font = UIFont(name: "EuphemiaUCAS-Bold", size: CGFloat(16))
-                cell.score.font = UIFont(name: "EuphemiaUCAS-Bold", size: CGFloat(16))
+                //cell.game.font = UIFont(name: "EuphemiaUCAS", size: CGFloat(16))
+                //cell.score.font = UIFont(name: "EuphemiaUCAS", size: CGFloat(16))
                 
                 return cell
             }

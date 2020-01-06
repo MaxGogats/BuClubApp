@@ -86,7 +86,5 @@ class MailingList : UIViewController{
         } catch let myJSONError {
             print(myJSONError)
         }
-        
     }
-    
 }
