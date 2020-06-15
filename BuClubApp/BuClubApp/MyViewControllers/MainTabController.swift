@@ -82,6 +82,7 @@ class MainTabController : UITabBarController {
                         index = index + 1
                     }
                     
+                 
                     var pIndex = 0
                     for td in pitchingData! {
                         if(pIndex == 0){
@@ -104,7 +105,10 @@ class MainTabController : UITabBarController {
                         pIndex = pIndex + 1
                     }
     
-                    print("Done")
+                    print("Stats loaded")
+                    
+                    
+                    
                 } catch {
                     // contents could not be loaded
                     print("Contents not loaded!")

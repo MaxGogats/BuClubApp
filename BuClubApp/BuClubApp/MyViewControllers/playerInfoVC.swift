@@ -39,6 +39,7 @@ class playerInfoVC: UIViewController {
         
         loadPlayerData()
         
+            
         abNum.text = rosterStatArray[rowClicked-1].ab
         hitsNum.text = rosterStatArray[rowClicked-1].numHits
         avgNum.text = rosterStatArray[rowClicked-1].avg
